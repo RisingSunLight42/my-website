@@ -49,12 +49,20 @@
                 name="user"
                 type="text"
                 id="user"
+                placeholder="RisingSunLight"
             />
             <label for="email">Ton email</label>
-            <input required="true" name="email" type="email" id="email" />
+            <input
+                required="true"
+                name="email"
+                type="email"
+                id="email"
+                placeholder="risingsunlight@gmail.com"
+            />
             <label for="choix_avis">Ton avis</label>
             <!-- Un select est comme un input, mais il peut contenir plusieurs balises options pour permettre les choix multiples-->
-            <select name="choix_avis" id="choix_avis">
+            <select required="true" name="choix_avis" id="choix_avis">
+                <option value="aucun">Je n'ai pas d'avis.</option>
                 <option value="excellent">Excellent !</option>
                 <option value="bof">Bof.</option>
                 <option value="nul">Nul...</option>
