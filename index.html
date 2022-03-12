@@ -22,103 +22,105 @@
                 <i> futur</i> !
             </p>
         </header>
-        <section class="gallerie">
-            <h2>Soutsu, mais dans sa version lion !</h2>
-            <!-- Le "alt" permet d'afficher un texte pour les personnes ne pouvant pas charger les images, ou les malvoyants
-            Les attributs width et height seront déplacés dans du CSS plus tard -->
-            <img
-                width="486"
-                height="420"
-                src="images/Soutsu_Lion.png"
-                alt="Image de mon fursona Soutsu, mais en lion avec des ailes de phénix enflammées."
-            />
-        </section>
-        <section class="videos">
-            <h2>Ma dernière vidéo Speed Writing en lien</h2>
-            <!-- l'attribut target permet de définir où ouvrir le lien, ici _blank dit de la faire dans un nouvel onglet-->
-            <a
-                target="_blank"
-                href="https://www.youtube.com/watch?v=oApNnotJoeM"
-                ><img
-                    src="images/iconmonstr-youtube-6.svg"
-                    alt="Icône de Youtube"
+        <main>
+            <section class="gallerie">
+                <h2>Soutsu, mais dans sa version lion !</h2>
+                <!-- Le "alt" permet d'afficher un texte pour les personnes ne pouvant pas charger les images, ou les malvoyants
+                Les attributs width et height seront déplacés dans du CSS plus tard -->
+                <img
+                    width="486"
+                    height="420"
+                    src="images/Soutsu_Lion.png"
+                    alt="Image de mon fursona Soutsu, mais en lion avec des ailes de phénix enflammées."
                 />
-                <em>Speed Writing #4</em></a
-            >
-        </section>
-        <section class="choses-aimees">
-            <h2>Les choses que j'aime</h2>
-            <!-- ul est la balise pour les listes à puces, ol pour les listes ordonnées
-            la balise li permet d'indiquer qu'un élément fait partie de la liste-->
-            <ul>
-                <!-- Chose aimée numéro 1-->
-                <li>
-                    J'aime coder...
-                    <ol class="classement">
-                        <!-- Classement de ce que j'aime à l'intérieur-->
-                        <li>... en Javascript</li>
-                        <li>... en Python</li>
-                        <li>... en HTML</li>
-                    </ol>
-                </li>
-                <!-- Chose aimée numéro 2-->
-                <li>
-                    Mes matières favorites sont...
-                    <ol class="classement">
-                        ol>
-                        <!-- Classement de ce que j'aime à l'intérieur-->
-                        <li>... la NSI</li>
-                        <li>... les maths</li>
-                        <li>... l'histoire</li>
-                    </ol>
-                </li>
-                <!-- Chose aimée numéro 3-->
-                <li>
-                    J'adore écrire...
-                    <ol class="classement">
-                        <!-- Classement de ce que j'aime à l'intérieur-->
-                        <li>... du fantastique</li>
-                        <li>... du policier</li>
-                        <li>... de l'horreur</li>
-                    </ol>
-                </li>
-            </ul>
-        </section>
-        <section class="retour-visiteur">
-            <h2>Donnez-moi votre avis sur mon site web !</h2>
-            <form>
-                <!-- Le label identifie à quel input il appartient via l'attribut id
-                l'attribut name permet de bien envoyer les informations dans le formulaire.
-                !Si un input n'a pas de name, il ne sera pas envoyé.-->
-                <label for="user">Ton pseudo</label>
-                <input
-                    required="true"
-                    maxlength="20"
-                    name="user"
-                    type="text"
-                    id="user"
-                    placeholder="RisingSunLight"
-                />
-                <label for="email">Ton email</label>
-                <input
-                    required="true"
-                    name="email"
-                    type="email"
-                    id="email"
-                    placeholder="risingsunlight@gmail.com"
-                />
-                <label for="choix_avis">Ton avis</label>
-                <!-- Un select est comme un input, mais il peut contenir plusieurs balises options pour permettre les choix multiples-->
-                <select required="true" name="choix_avis" id="choix_avis">
-                    <option value="aucun">Je n'ai pas d'avis.</option>
-                    <option value="excellent">Excellent !</option>
-                    <option value="bof">Bof.</option>
-                    <option value="nul">Nul...</option>
-                </select>
-                <!-- Le type submit permet de déclarer le bouton comme un bouton d'envoi du formulaire-->
-                <button type="submit">Envoyer</button>
-            </form>
-        </section>
+            </section>
+            <section class="videos">
+                <h2>Ma dernière vidéo Speed Writing en lien</h2>
+                <!-- l'attribut target permet de définir où ouvrir le lien, ici _blank dit de la faire dans un nouvel onglet-->
+                <a
+                    target="_blank"
+                    href="https://www.youtube.com/watch?v=oApNnotJoeM"
+                    ><img
+                        src="images/iconmonstr-youtube-6.svg"
+                        alt="Icône de Youtube"
+                    />
+                    <em>Speed Writing #4</em></a
+                >
+            </section>
+            <section class="choses-aimees">
+                <h2>Les choses que j'aime</h2>
+                <!-- ul est la balise pour les listes à puces, ol pour les listes ordonnées
+                la balise li permet d'indiquer qu'un élément fait partie de la liste-->
+                <ul>
+                    <!-- Chose aimée numéro 1-->
+                    <li>
+                        J'aime coder...
+                        <ol class="classement">
+                            <!-- Classement de ce que j'aime à l'intérieur-->
+                            <li>... en Javascript</li>
+                            <li>... en Python</li>
+                            <li>... en HTML</li>
+                        </ol>
+                    </li>
+                    <!-- Chose aimée numéro 2-->
+                    <li>
+                        Mes matières favorites sont...
+                        <ol class="classement">
+                            ol>
+                            <!-- Classement de ce que j'aime à l'intérieur-->
+                            <li>... la NSI</li>
+                            <li>... les maths</li>
+                            <li>... l'histoire</li>
+                        </ol>
+                    </li>
+                    <!-- Chose aimée numéro 3-->
+                    <li>
+                        J'adore écrire...
+                        <ol class="classement">
+                            <!-- Classement de ce que j'aime à l'intérieur-->
+                            <li>... du fantastique</li>
+                            <li>... du policier</li>
+                            <li>... de l'horreur</li>
+                        </ol>
+                    </li>
+                </ul>
+            </section>
+            <section class="retour-visiteur">
+                <h2>Donnez-moi votre avis sur mon site web !</h2>
+                <form>
+                    <!-- Le label identifie à quel input il appartient via l'attribut id
+                    l'attribut name permet de bien envoyer les informations dans le formulaire.
+                    !Si un input n'a pas de name, il ne sera pas envoyé.-->
+                    <label for="user">Ton pseudo</label>
+                    <input
+                        required="true"
+                        maxlength="20"
+                        name="user"
+                        type="text"
+                        id="user"
+                        placeholder="RisingSunLight"
+                    />
+                    <label for="email">Ton email</label>
+                    <input
+                        required="true"
+                        name="email"
+                        type="email"
+                        id="email"
+                        placeholder="risingsunlight@gmail.com"
+                    />
+                    <label for="choix_avis">Ton avis</label>
+                    <!-- Un select est comme un input, mais il peut contenir plusieurs balises options pour permettre les choix multiples-->
+                    <select required="true" name="choix_avis" id="choix_avis">
+                        <option value="aucun">Je n'ai pas d'avis.</option>
+                        <option value="excellent">Excellent !</option>
+                        <option value="bof">Bof.</option>
+                        <option value="nul">Nul...</option>
+                    </select>
+                    <!-- Le type submit permet de déclarer le bouton comme un bouton d'envoi du formulaire-->
+                    <button type="submit">Envoyer</button>
+                </form>
+            </section>
+        </main>
         <footer>
             <p>
                 Créé en 2022 par RisingSunLight en suivant une
