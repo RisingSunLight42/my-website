@@ -13,16 +13,16 @@
         <!-- Permet d'adapter l'affichage pour les téléphones : le contenu prendra toute la place disponible-->
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
-    <d>
-        <div class="bienvenue">
+    <body>
+        <header>
             <h1>Bienvenue sur mon site web !</h1>
             <p>
                 Ceci est un petit paragraphe de texte qui devrait changer dans
                 le
                 <i> futur</i> !
             </p>
-        </div>
-        <div class="gallerie">
+        </header>
+        <section class="gallerie">
             <h2>Soutsu, mais dans sa version lion !</h2>
             <!-- Le "alt" permet d'afficher un texte pour les personnes ne pouvant pas charger les images, ou les malvoyants
             Les attributs width et height seront déplacés dans du CSS plus tard -->
@@ -32,8 +32,8 @@
                 src="images/Soutsu_Lion.png"
                 alt="Image de mon fursona Soutsu, mais en lion avec des ailes de phénix enflammées."
             />
-        </div>
-        <div class="videos">
+        </section>
+        <section class="videos">
             <h2>Ma dernière vidéo Speed Writing en lien</h2>
             <!-- l'attribut target permet de définir où ouvrir le lien, ici _blank dit de la faire dans un nouvel onglet-->
             <a
@@ -45,8 +45,8 @@
                 />
                 <em>Speed Writing #4</em></a
             >
-        </div>
-        <div class="choses-aimees">
+        </section>
+        <section class="choses-aimees">
             <h2>Les choses que j'aime</h2>
             <!-- ul est la balise pour les listes à puces, ol pour les listes ordonnées
             la balise li permet d'indiquer qu'un élément fait partie de la liste-->
@@ -83,8 +83,8 @@
                     </ol>
                 </li>
             </ul>
-        </div>
-        <div class="retour-visiteur">
+        </section>
+        <section class="retour-visiteur">
             <h2>Donnez-moi votre avis sur mon site web !</h2>
             <form>
                 <!-- Le label identifie à quel input il appartient via l'attribut id
@@ -118,6 +118,6 @@
                 <!-- Le type submit permet de déclarer le bouton comme un bouton d'envoi du formulaire-->
                 <button type="submit">Envoyer</button>
             </form>
-        </div>
+        </section>
     </body>
 </html>
