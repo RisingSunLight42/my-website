@@ -43,9 +43,16 @@
             l'attribut name permet de bien envoyer les informations dans le formulaire.
             !Si un input n'a pas de name, il ne sera pas envoyé.-->
             <label for="user">Ton pseudo</label>
-            <input name="user" type="text" id="user" />
-            <label for="avis">Ton avis</label>
-            <input name="avis" type="text" id="avis" />
+            <input maxlength="20" name="user" type="text" id="user" />
+            <label for="email">Ton email</label>
+            <input name="email" type="email" id="email" />
+            <label for="choix_avis">Ton avis</label>
+            <!-- Un select est comme un input, mais il peut contenir plusieurs balises options pour permettre les choix multiples-->
+            <select name="choix_avis" id="choix_avis">
+                <option value="excellent">Excellent !</option>
+                <option value="bof">Bof.</option>
+                <option value="nul">Nul...</option>
+            </select>
             <!-- Le type submit permet de déclarer le bouton comme un bouton d'envoi du formulaire-->
             <button type="submit">Envoyer</button>
         </form>
