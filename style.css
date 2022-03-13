@@ -18,3 +18,8 @@ ET qu'elles sont enfant d'une balise de lien.*/
 a > img + em {
     color: rgb(172, 105, 60);
 }
+
+/* :nth-child sélectionne l'enfant avec le numéro indiqué, on peut préciser quel type d'enfant devant les : */
+.classement li:nth-child(1) {
+    color: rgb(12, 86, 170);
+}
