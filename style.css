@@ -60,6 +60,11 @@ button {
     border-radius: 0.7rem;
 }
 
+button:hover {
+    cursor: pointer;
+    background: rgb(60, 60, 238);
+}
+
 footer {
     position: fixed;
     bottom: 0%;
