@@ -10,6 +10,10 @@ body {
     margin-left: 20px;
 }
 
+label {
+    display: block;
+}
+
 /* Le combinateur > permet de cible l'enfant du parent sélectionné, tandis que + l'élément suivant
 Dans le cas que j'ai utilisé, .galerie h2 fonctionne aussi */
 .galerie > h2 {
@@ -44,6 +48,7 @@ Par exemple, j'ai 3 classes "classement", si je fais .classement :nth-child(3), 
 
 /* background: none permet de retirer le background par défaut des boutons */
 button {
+    display: block;
     margin: 1rem;
     padding: 0.5rem 1rem;
     background: rgb(79, 79, 218);
