@@ -1,3 +1,7 @@
 .retour-visiteur h2 {
     color: darkcyan;
 }
+
+* {
+    font-size: large;
+}
