@@ -41,3 +41,10 @@ Par exemple, j'ai 3 classes "classement", si je fais .classement :nth-child(3), 
 .retour-visiteur h2 {
     color: darkcyan;
 }
+
+button {
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    background: none;
+    border: 0.15rem solid rgb(53, 53, 153);
+}
