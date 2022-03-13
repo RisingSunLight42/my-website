@@ -3,12 +3,15 @@
 }
 
 * {
-    font-size: large;
     /* Mettre margin et padding à 0 permet manipuler le margin et padding de tous les enfants de la page à 0.
     box-sizing: border-box permet d'éviter que quand l'on augmente la taille d'un élément, il le fasse vers l'extérieur et agrandisse la page.*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    margin-left: 20px;
 }
 
 /* Le combinateur > permet de cible l'enfant du parent sélectionné, tandis que + l'élément suivant
@@ -22,6 +25,14 @@ Dans cet exemple, on colore les balises em lorsqu'elles suivent directement une 
 ET qu'elles sont enfant d'une balise de lien.*/
 a > img + em {
     color: rgb(172, 105, 60);
+}
+
+.choses-aimees ul {
+    margin-left: 15px;
+}
+
+.classement {
+    margin-left: 5px;
 }
 
 /* :nth-child sélectionne l'enfant avec le numéro indiqué, on peut préciser quel type d'enfant devant les : 
