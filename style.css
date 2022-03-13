@@ -1,10 +1,6 @@
-.retour-visiteur h2 {
-    color: darkcyan;
-}
-
-* {
-    /* Mettre margin et padding à 0 permet manipuler le margin et padding de tous les enfants de la page à 0.
+/* Mettre margin et padding à 0 permet manipuler le margin et padding de tous les enfants de la page à 0.
     box-sizing: border-box permet d'éviter que quand l'on augmente la taille d'un élément, il le fasse vers l'extérieur et agrandisse la page.*/
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -40,4 +36,8 @@ Si on ne précise pas, il va chercher le nombre de classe (ou autre) précisé.
 Par exemple, j'ai 3 classes "classement", si je fais .classement :nth-child(3), il va colorer la 3e balises avec la classe classement */
 .classement li:nth-child(1) {
     color: rgb(12, 86, 170);
+}
+
+.retour-visiteur h2 {
+    color: darkcyan;
 }
