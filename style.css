@@ -1,0 +1,82 @@
+/* Mettre margin et padding à 0 permet manipuler le margin et padding de tous les enfants de la page à 0.
+    box-sizing: border-box permet d'éviter que quand l'on augmente la taille d'un élément, il le fasse vers l'extérieur et agrandisse la page.*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+}
+
+/* Le combinateur > permet de cible l'enfant du parent sélectionné, tandis que + l'élément suivant
+Dans le cas que j'ai utilisé, .galerie h2 fonctionne aussi */
+.galerie > h2 {
+    color: rgb(226, 83, 27);
+}
+
+/* On peut utiliser plusieurs combinateurs.
+Dans cet exemple, on colore les balises em lorsqu'elles suivent directement une balise image
+ET qu'elles sont enfant d'une balise de lien.*/
+a > img + em {
+    color: rgb(172, 105, 60);
+}
+
+.choses-aimees ul {
+    margin-left: 15px;
+}
+
+.classement {
+    margin-left: 5px;
+}
+
+/* :nth-child sélectionne l'enfant avec le numéro indiqué, on peut préciser quel type d'enfant devant les : 
+Si on ne précise pas, il va chercher le nombre de classe (ou autre) précisé.
+Par exemple, j'ai 3 classes "classement", si je fais .classement :nth-child(3), il va colorer la 3e balises avec la classe classement */
+.classement li:nth-child(1) {
+    color: rgb(12, 86, 170);
+}
+
+.retour-visiteur h2 {
+    color: darkcyan;
+}
+
+/* focus désigne lorsque l'objet est sélectionné */
+input:focus {
+    background-color: rgb(226, 214, 214);
+}
+
+#choix_avis {
+    cursor: pointer;
+}
+
+/* background: none permet de retirer le background par défaut des boutons */
+button {
+    display: block;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    background: rgb(79, 79, 218);
+    border: 0.15rem solid rgb(53, 53, 153);
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 0.7rem;
+}
+
+/* hover désigne lorsque l'objet est survolé */
+button:hover {
+    cursor: pointer;
+    background: rgb(60, 60, 238);
+}
+
+footer {
+    position: fixed;
+    bottom: 0%;
+    margin-bottom: 0.1rem;
+}
