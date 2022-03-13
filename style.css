@@ -4,6 +4,11 @@
 
 * {
     font-size: large;
+    /* Mettre margin et padding à 0 permet manipuler le margin et padding de tous les enfants de la page à 0.
+    box-sizing: border-box permet d'éviter que quand l'on augmente la taille d'un élément, il le fasse vers l'extérieur et agrandisse la page.*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Le combinateur > permet de cible l'enfant du parent sélectionné, tandis que + l'élément suivant
