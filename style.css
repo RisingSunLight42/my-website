@@ -48,6 +48,15 @@ Par exemple, j'ai 3 classes "classement", si je fais .classement :nth-child(3), 
     color: darkcyan;
 }
 
+/* focus désigne lorsque l'objet est sélectionné */
+input:focus {
+    background-color: rgb(226, 214, 214);
+}
+
+#choix_avis {
+    cursor: pointer;
+}
+
 /* background: none permet de retirer le background par défaut des boutons */
 button {
     display: block;
@@ -60,6 +69,7 @@ button {
     border-radius: 0.7rem;
 }
 
+/* hover désigne lorsque l'objet est survolé */
 button:hover {
     cursor: pointer;
     background: rgb(60, 60, 238);
