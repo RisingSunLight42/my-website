@@ -76,6 +76,11 @@ nav {
     }
 }
 
+/* Sert quand le burger sera cliqué -> la classe de nav-links deviendra active pour faire apparaître les éléments de navigation*/
+.nav-active {
+    transform: translateX(0%);
+}
+
 /** Partie corps de la page */
 
 main,
