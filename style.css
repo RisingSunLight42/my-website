@@ -6,6 +6,8 @@
     box-sizing: border-box;
 }
 
+/** Partie navigation */
+
 nav {
     display: flex;
     justify-content: space-around;
@@ -45,6 +47,17 @@ nav {
     margin: 5px;
     background-color: aliceblue;
 }
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+    }
+}
+
+/** Partie corps de la page */
 
 main,
 footer {
