@@ -12,6 +12,7 @@ nav {
     align-items: center;
     min-height: 8vh;
     background-color: aquamarine;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .nav-links {
@@ -19,6 +20,14 @@ nav {
     justify-content: space-around;
     list-style: none;
     width: 50%;
+}
+
+.nav-links a {
+    color: black;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
 }
 
 main,
