@@ -21,6 +21,9 @@ const navSlide = () => {
                 }s`;
             }
         });
+
+        //* Animation du burger
+        burger.classList.toggle("toggle");
     });
 };
 
