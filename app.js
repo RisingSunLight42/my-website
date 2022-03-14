@@ -6,7 +6,7 @@ const navSlide = () => {
 
     //* Ajout d'un listener on click pour le burger
     burger.addEventListener("click", () => {
-        //* La fonction ci-dessous permet de changer la classe de l'élément en la classe passée en paramètre
+        //* La fonction ci-dessous permet d'ajouter la classe de l'élément en la classe passée en paramètre
         nav.classList.toggle("nav-active");
 
         //* Animation des liens
@@ -22,7 +22,7 @@ const navSlide = () => {
             }
         });
 
-        //* Animation du burger
+        //* Animation du burger, ajoute une classe toggle qui permet de le transformer en croix
         burger.classList.toggle("toggle");
     });
 };
