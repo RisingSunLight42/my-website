@@ -65,6 +65,7 @@ nav {
         transform: translateX(
             100%
         ); /* Permet de décaler vers la droite de 100% de la taille, masquant l'élément */
+        transition: transform 0.75s ease-in;
     }
     /* Masque les éléments de la liste, car on va les faire apparaître avec une animation */
     .nav-links li {
