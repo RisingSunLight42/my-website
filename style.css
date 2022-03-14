@@ -54,6 +54,11 @@ nav {
         right: 0px;
         height: 92vh;
         top: 8vh;
+        background-color: aquamarine;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Vu que la direction a changé en colonne, ce sont des objets séparés, on utilise donc align-items*/
+        width: 50%;
     }
 }
 
