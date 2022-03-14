@@ -59,6 +59,9 @@ nav {
         flex-direction: column;
         align-items: center; /* Vu que la direction a changé en colonne, ce sont des objets séparés, on utilise donc align-items*/
         width: 50%;
+        transform: translate(
+            100%
+        ); /* Permet de décaler vers la droite de 100% de la taille, masquant l'élément */
     }
 }
 
