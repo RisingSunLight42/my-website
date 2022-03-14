@@ -49,6 +49,9 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden; /* Masque le fait qu'il y a des éléments en + sur l'axe x*/
+    }
     .nav-links {
         position: absolute;
         right: 0px;
