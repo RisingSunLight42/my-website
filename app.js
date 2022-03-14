@@ -10,7 +10,17 @@ const navSlide = () => {
         nav.classList.toggle("nav-active");
 
         //* Animation des liens
-        navLinks.forEach((link, index) => {});
+        navLinks.forEach((link, index) => {
+            if (link.style.animation) {
+                // S'il y a déjà une animation, l'annule pour "ranger" les liens
+                link.style.animation = "";
+            } else {
+                // Sinon, anime l'apparition de la nav bar avec le texte faisant office de commande
+                link.style.animation = `navLinkFade 0.75s ease forwards ${
+                    index / 3 + 0.5
+                }s`;
+            }
+        });
     });
 };
 
