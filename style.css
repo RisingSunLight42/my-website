@@ -46,6 +46,7 @@ nav {
     height: 4px;
     margin: 5px;
     background-color: aliceblue;
+    transition: all 0.3s ease;
 }
 
 @media screen and (max-width: 768px) {
