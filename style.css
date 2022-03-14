@@ -35,6 +35,10 @@ nav {
     text-decoration: none;
 }
 
+.burger {
+    display: none;
+}
+
 .burger div {
     width: 30px;
     height: 4px;
