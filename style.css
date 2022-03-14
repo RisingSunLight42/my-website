@@ -35,6 +35,13 @@ nav {
     text-decoration: none;
 }
 
+.burger div {
+    width: 30px;
+    height: 5px;
+    margin: 5px;
+    color: aliceblue;
+}
+
 main,
 footer {
     margin-top: 1.5rem;
