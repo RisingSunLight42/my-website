@@ -6,6 +6,21 @@
     box-sizing: border-box;
 }
 
+header {
+    background-color: gray;
+    height: 10vh;
+}
+
+nav {
+    display: flex;
+    background-color: aquamarine;
+    height: auto;
+}
+
+.nav-link {
+    list-style: none;
+}
+
 main,
 footer {
     margin-top: 1.5rem;
