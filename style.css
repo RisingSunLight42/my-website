@@ -66,6 +66,14 @@ nav {
             100%
         ); /* Permet de décaler vers la droite de 100% de la taille, masquant l'élément */
     }
+    /* Masque les éléments de la liste, car on va les faire apparaître avec une animation */
+    .nav-links li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
 }
 
 /** Partie corps de la page */
