@@ -16,14 +16,30 @@
     </head>
     <body>
         <header>
-            <h1>Bienvenue sur mon site web !</h1>
-            <p>
-                Ceci est un petit paragraphe de texte qui devrait changer dans
-                le
-                <i> futur</i> !
-            </p>
+            <nav>
+                <h4 class="titre-page">RisingSunLight</h4>
+                <ul class="nav-links">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Projets</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <!-- Burge désigne les petites barres empilées -->
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
         </header>
         <main>
+            <section class="bienvenue">
+                <h1>Bienvenue sur mon site web !</h1>
+                <p>
+                    Ceci est un petit paragraphe de texte qui devrait changer
+                    dans le
+                    <i> futur</i> !
+                </p>
+            </section>
             <section class="galerie">
                 <h2>Soutsu, mais dans sa version lion !</h2>
                 <!-- Le "alt" permet d'afficher un texte pour les personnes ne pouvant pas charger les images, ou les malvoyants
@@ -136,5 +152,6 @@
                 >
             </p>
         </footer>
+        <script src="app.js"></script>
     </body>
 </html>

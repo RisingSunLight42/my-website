@@ -6,7 +6,114 @@
     box-sizing: border-box;
 }
 
-body {
+/** Partie navigation */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    color: aliceblue;
+    background-color: rgb(52, 78, 150);
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.titre-page {
+    letter-spacing: 4px;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 50%;
+}
+
+.nav-links a {
+    color: aliceblue;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 30px;
+    height: 4px;
+    margin: 5px;
+    background-color: aliceblue;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden; /* Masque le fait qu'il y a des éléments en + sur l'axe x*/
+    }
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: rgb(52, 78, 150);
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Vu que la direction a changé en colonne, ce sont des objets séparés, on utilise donc align-items*/
+        width: 50%;
+        transform: translateX(
+            100%
+        ); /* Permet de décaler vers la droite de 100% de la taille, masquant l'élément */
+        transition: transform 0.75s ease-in;
+    }
+    /* Masque les éléments de la liste, car on va les faire apparaître avec une animation */
+    .nav-links li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+/* Sert quand le burger sera cliqué -> la classe de nav-links deviendra active pour faire apparaître les éléments de navigation*/
+.nav-active {
+    transform: translateX(0%);
+}
+
+/* La partie ci-dessous permet de réaliser une animation grâce à JS */
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* Aspect des lignes du burger quand le burger est cliqué */
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-7px, -6px);
+}
+
+/** Partie corps de la page */
+
+main,
+footer {
     margin-top: 1.5rem;
     margin-left: 1.5rem;
     margin-bottom: 1.5rem;
