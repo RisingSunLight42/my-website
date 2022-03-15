@@ -8,6 +8,7 @@ const navSlide = () => {
     burger.addEventListener("click", () => {
         //* La fonction ci-dessous permet d'ajouter la classe de l'élément en la classe passée en paramètre
         nav.classList.toggle("nav-active");
+        document.body.classList.toggle("masque-overflow");
 
         //* Animation des liens
         navLinks.forEach((link, index) => {
