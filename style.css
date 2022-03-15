@@ -50,6 +50,11 @@ nav {
     display: none;
 }
 
+.conteneur-burger {
+    display: flex;
+    align-items: center;
+}
+
 .burger div {
     width: 30px;
     height: 4px;
