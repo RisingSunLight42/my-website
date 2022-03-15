@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+.masque-overflow {
+    overflow-y: hidden;
+}
+
 /** Partie navigation */
 
 nav {
