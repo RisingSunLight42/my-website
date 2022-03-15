@@ -75,17 +75,28 @@ nav {
         background-color: rgb(52, 78, 150);
         display: flex;
         flex-direction: column;
-        align-items: center; /* Vu que la direction a changé en colonne, ce sont des objets séparés, on utilise donc align-items*/
+        align-items: stretch; /* Met en stretch pour que les items à l'intérieur de nav links prenne toute la place*/
         width: 50%;
         transform: translateX(
             100%
         ); /* Permet de décaler vers la droite de 100% de la taille, masquant l'élément */
         transition: transform 0.75s ease-in;
     }
-    /* Masque les éléments de la liste, car on va les faire apparaître avec une animation */
+    /* Masque les éléments de la liste, car on va les faire apparaître avec une animation.
+    Rajout que les conteners de list sont en flex direction column et que leurs items doivent prendre toute la place*/
     .nav-links li {
         opacity: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
     }
+
+    /* Met les liens en flex (prennent donc toute la place) et les alignent au centre */
+    .nav-links a {
+        display: flex;
+        justify-content: center;
+    }
+
     .burger {
         display: block;
         cursor: pointer;
