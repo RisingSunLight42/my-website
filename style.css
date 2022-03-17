@@ -73,6 +73,51 @@ nav {
     transition: all 0.3s ease;
 }
 
+@media screen and (max-width: 768px) {
+    /** Partie navigation */
+    .masque-overflow-x {
+        /* 
+        À cause du tag meta viewport, les balises html et body sont ignorées sur téléphone.
+        Il faut donc appliquer un overflow-x hidden et une position relative sur un div situé dans le body*/
+        overflow-x: hidden;
+        position: relative;
+    }
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: rgb(52, 78, 150);
+        display: flex;
+        flex-direction: column;
+        align-items: stretch; /* Met en stretch pour que les items à l'intérieur de nav links prenne toute la place*/
+        width: 50%;
+        transform: translateX(
+            100%
+        ); /* Permet de décaler vers la droite de 100% de la taille, masquant l'élément */
+        transition: transform 0.75s ease-in;
+    }
+    /* Masque les éléments de la liste, car on va les faire apparaître avec une animation.
+    Rajout que les conteners de list sont en flex direction column et que leurs items doivent prendre toute la place*/
+    .nav-links li {
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    /* Met les liens en flex (prennent donc toute la place) et les alignent au centre */
+    .nav-links a {
+        display: flex;
+        justify-content: center;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+}
+
 /* Sert quand le burger sera cliqué -> la classe de nav-links deviendra active pour faire apparaître les éléments de navigation*/
 .nav-active {
     transform: translateX(0%);
@@ -126,6 +171,14 @@ Dans le cas que j'ai utilisé, .galerie h2 fonctionne aussi */
 #soutsu_lion {
     width: 40%;
     height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    /** Gestion de la taille de l'image de Soutsu lorsque la taille de l'écran est plus faible */
+    #soutsu_lion {
+        width: 70%;
+        height: auto;
+    }
 }
 
 /* On peut utiliser plusieurs combinateurs.
@@ -185,55 +238,4 @@ footer {
     position: fixed;
     bottom: 0%;
     margin-bottom: 0.1rem;
-}
-
-@media screen and (max-width: 768px) {
-    /** Partie navigation */
-    .masque-overflow-x {
-        /* 
-        À cause du tag meta viewport, les balises html et body sont ignorées sur téléphone.
-        Il faut donc appliquer un overflow-x hidden et une position relative sur un div situé dans le body*/
-        overflow-x: hidden;
-        position: relative;
-    }
-    .nav-links {
-        position: absolute;
-        right: 0px;
-        height: 92vh;
-        top: 8vh;
-        background-color: rgb(52, 78, 150);
-        display: flex;
-        flex-direction: column;
-        align-items: stretch; /* Met en stretch pour que les items à l'intérieur de nav links prenne toute la place*/
-        width: 50%;
-        transform: translateX(
-            100%
-        ); /* Permet de décaler vers la droite de 100% de la taille, masquant l'élément */
-        transition: transform 0.75s ease-in;
-    }
-    /* Masque les éléments de la liste, car on va les faire apparaître avec une animation.
-    Rajout que les conteners de list sont en flex direction column et que leurs items doivent prendre toute la place*/
-    .nav-links li {
-        opacity: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    /* Met les liens en flex (prennent donc toute la place) et les alignent au centre */
-    .nav-links a {
-        display: flex;
-        justify-content: center;
-    }
-
-    .burger {
-        display: block;
-        cursor: pointer;
-    }
-
-    /** Gestion de la taille de certaines images */
-    #soutsu_lion {
-        width: 70%;
-        height: auto;
-    }
 }
