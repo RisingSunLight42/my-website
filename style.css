@@ -75,6 +75,9 @@ nav {
 
 @media screen and (max-width: 768px) {
     .masque-overflow-x {
+        /* 
+        À cause du tag meta viewport, les balises html et body sont ignorées sur téléphone.
+        Il faut donc appliquer un overflow-x hidden et une position relative sur un div situé dans le body*/
         overflow-x: hidden;
         position: relative;
     }
