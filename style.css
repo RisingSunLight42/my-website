@@ -74,9 +74,8 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
-    body,
-    html {
-        overflow-x: hidden; /* Masque le fait qu'il y a des éléments en + sur l'axe x*/
+    .masque-overflow-x {
+        overflow-x: hidden;
     }
     .nav-links {
         position: absolute;
