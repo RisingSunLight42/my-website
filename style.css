@@ -156,13 +156,8 @@ body {
 }
 
 main {
-    margin-top: 1.5rem;
-    margin-left: 1.5rem;
-    margin-bottom: 6vh;
-}
-
-label {
-    display: block;
+    margin: 1.5rem 30% 6vh 30%;
+    text-align: justify;
 }
 
 /* Le combinateur > permet de cible l'enfant du parent sélectionné, tandis que + l'élément suivant
@@ -172,14 +167,14 @@ Dans le cas que j'ai utilisé, .galerie h2 fonctionne aussi */
 }
 
 #soutsu_lion {
-    width: 40%;
+    width: 80%;
     height: auto;
 }
 
 @media screen and (max-width: 768px) {
     /** Gestion de la taille de l'image de Soutsu lorsque la taille de l'écran est plus faible */
     #soutsu_lion {
-        width: 70%;
+        width: 90%;
         height: auto;
     }
 }
@@ -207,6 +202,23 @@ input:focus {
 
 #choix_avis {
     cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: stretch;
+    margin: auto;
+}
+
+form > input {
+    display: flex;
+    margin: auto;
+}
+
+form > select {
+    margin: auto;
 }
 
 /* background: none permet de retirer le background par défaut des boutons */
