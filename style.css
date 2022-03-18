@@ -18,7 +18,7 @@ nav {
     align-items: stretch;
     min-height: 8vh;
     color: aliceblue;
-    background-color: rgb(52, 78, 150);
+    background-color: rgba(34, 44, 148, 58);
     font-family: Georgia, "Times New Roman", Times, serif;
 }
 
@@ -53,7 +53,7 @@ nav {
 }
 
 .nav-links a:hover {
-    background-color: rgb(40, 60, 116);
+    background-color: rgba(20, 34, 138, 28);
 }
 
 .burger {
@@ -87,7 +87,7 @@ nav {
         right: 0px;
         height: 87vh;
         top: 8vh;
-        background-color: rgb(52, 78, 150);
+        background-color: rgba(34, 44, 148, 58);
         display: flex;
         flex-direction: column;
         align-items: stretch; /* Met en stretch pour que les items à l'intérieur de nav links prenne toute la place*/
@@ -150,6 +150,10 @@ nav {
 }
 
 /** Partie corps de la page */
+
+body {
+    background-color: rgba(110, 123, 255, 100);
+}
 
 main {
     margin-top: 1.5rem;
@@ -220,7 +224,7 @@ button {
     display: block;
     margin: 1rem;
     padding: 0.5rem 1rem;
-    background: rgb(79, 79, 218);
+    background: rgba(34, 44, 148, 58);
     border: 0.15rem solid rgb(53, 53, 153);
     color: white;
     font-size: 0.8rem;
@@ -230,7 +234,7 @@ button {
 /* hover désigne lorsque l'objet est survolé */
 button:hover {
     cursor: pointer;
-    background: rgb(60, 60, 238);
+    background: rgba(20, 34, 138, 28);
 }
 
 footer {
@@ -241,5 +245,5 @@ footer {
     justify-content: center;
     position: fixed;
     bottom: 0%;
-    background-color: azure;
+    background-color: rgba(224, 198, 101, 88);
 }
