@@ -177,6 +177,10 @@ Dans le cas que j'ai utilisé, .galerie h2 fonctionne aussi */
         width: 90%;
         height: auto;
     }
+
+    main {
+        margin: 1.5rem 15% 6vh 20%;
+    }
 }
 
 /* On peut utiliser plusieurs combinateurs.
@@ -245,6 +249,7 @@ footer {
     height: 5vh;
     align-items: center;
     justify-content: center;
+    text-align: center;
     position: fixed;
     bottom: 0%;
     background-color: rgba(224, 198, 101, 88);
