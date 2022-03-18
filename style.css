@@ -187,8 +187,9 @@ Dans le cas que j'ai utilisé, .galerie h2 fonctionne aussi */
 /* On peut utiliser plusieurs combinateurs.
 Dans cet exemple, on colore les balises em lorsqu'elles suivent directement une balise image
 ET qu'elles sont enfant d'une balise de lien.*/
-a > img + em {
-    color: rgb(172, 105, 60);
+a {
+    color: rgba(20, 14, 178, 100);
+    text-decoration: none;
 }
 
 .choses-aimees ul {
@@ -197,17 +198,6 @@ a > img + em {
 
 .classement {
     margin-left: 5px;
-}
-
-/* :nth-child sélectionne l'enfant avec le numéro indiqué, on peut préciser quel type d'enfant devant les : 
-Si on ne précise pas, il va chercher le nombre de classe (ou autre) précisé.
-Par exemple, j'ai 3 classes "classement", si je fais .classement :nth-child(3), il va colorer la 3e balises avec la classe classement */
-.classement li:nth-child(1) {
-    color: rgb(12, 86, 170);
-}
-
-.retour-visiteur h2 {
-    color: darkcyan;
 }
 
 /* focus désigne lorsque l'objet est sélectionné */
