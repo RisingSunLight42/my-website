@@ -164,6 +164,11 @@ h2 {
     text-align: center;
 }
 
+iframe {
+    width: 100%;
+    height: 315px;
+}
+
 /* Le combinateur > permet de cible l'enfant du parent sélectionné, tandis que + l'élément suivant
 Dans le cas que j'ai utilisé, .galerie h2 fonctionne aussi */
 .galerie > h2 {
