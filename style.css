@@ -176,9 +176,16 @@ Dans le cas que j'ai utilisé, .galerie h2 fonctionne aussi */
     color: rgb(226, 83, 27);
 }
 
-img {
-    width: 100%;
-    height: auto;
+.galerie .slider {
+    padding: 10px;
+}
+
+.slider figure {
+    display: none;
+}
+
+.slider figure img {
+    max-width: 100%;
 }
 
 @media screen and (max-width: 768px) {
