@@ -188,6 +188,20 @@ Dans le cas que j'ai utilisé, .galerie h2 fonctionne aussi */
     max-width: 100%;
 }
 
+figure.active {
+    display: block;
+    animation: Sliderfade 0.8s;
+}
+
+@keyframes Sliderfade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 @media screen and (max-width: 768px) {
     /** Modification des marges de l'écran lorsque sa taille est plus faible */
     main {
