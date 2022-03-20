@@ -206,9 +206,16 @@ figure.active {
     width: 100%;
     height: auto;
     border: 1px solid #000;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3); /* Rajoute une sorte d'ombre */
     display: flex;
-    justify-content: center;
+}
+
+.bouton-nav {
+    flex-grow: 1; /* Permet de dire de prendre tout l'espace disponible restant */
+    text-align: center;
+    font-size: 25px;
+    margin: 0 15px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
