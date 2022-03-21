@@ -38,40 +38,47 @@ const precedent = document.querySelector(".left");
 
 let count = 0;
 
-const slideSuivant = () => {
-    figures[count].classList.remove("active");
+const sliderGalerie = () => {
+    const slideSuivant = () => {
+        figures[count].classList.remove("active");
 
-    if (count < nbSlide - 1) {
-        count++;
-    } else {
-        count = 0;
-    }
+        if (count < nbSlide - 1) {
+            count++;
+        } else {
+            count = 0;
+        }
 
-    figures[count].classList.add("active");
+        figures[count].classList.add("active");
+    };
+    suivant.addEventListener("click", slideSuivant);
+
+    const slidePrecedente = () => {
+        figures[count].classList.remove("active");
+
+        if (count > 0) {
+            count--;
+        } else {
+            count = nbSlide - 1;
+        }
+
+        figures[count].classList.add("active");
+    };
+    precedent.addEventListener("click", slideSuivant);
+
+    const keyPress = (e) => {
+        // Sert à gérer la galerie via les flèches, le code 37 correspond à la flèche gauche, 39 à la flèche droite
+        if (e.keyCode === 37) {
+            slidePrecedente();
+        } else if (e.keyCode === 39) {
+            slideSuivant();
+        }
+    };
+    document.addEventListener("keydown", keyPress);
 };
-suivant.addEventListener("click", slideSuivant);
 
-const slidePrecedente = () => {
-    figures[count].classList.remove("active");
-
-    if (count > 0) {
-        count--;
-    } else {
-        count = nbSlide - 1;
-    }
-
-    figures[count].classList.add("active");
+const app = () => {
+    navSlide();
+    sliderGalerie();
 };
-precedent.addEventListener("click", slideSuivant);
 
-const keyPress = (e) => {
-    // Sert à gérer la galerie via les flèches, le code 37 correspond à la flèche gauche, 39 à la flèche droite
-    if (e.keyCode === 37) {
-        slidePrecedente();
-    } else if (e.keyCode === 39) {
-        slideSuivant();
-    }
-};
-document.addEventListener("keydown", keyPress);
-
-navSlide();
+app();
