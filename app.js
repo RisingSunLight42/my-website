@@ -51,4 +51,17 @@ const slideSuivant = () => {
 };
 suivant.addEventListener("click", slideSuivant);
 
+const slidePrecedente = () => {
+    figures[count].classList.remove("active");
+
+    if (count > 0) {
+        count--;
+    } else {
+        count = nbSlide - 1;
+    }
+
+    figures[count].classList.add("active");
+};
+precedent.addEventListener("click", slideSuivant);
+
 navSlide();
