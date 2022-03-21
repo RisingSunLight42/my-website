@@ -28,14 +28,27 @@ const navSlide = () => {
     });
 };
 
-const slider = () => {
-    // Récupère les figures pour le slider
-    const figures = document.querySelectorAll("figure");
-    // Récupère le nombre d'éléments figures à récupérer
-    const nbSlide = figures.length;
-    // Récupère les boutons suivant et précédent
-    const suivant = document.querySelector(".right");
-    const precedent = document.querySelector(".left");
+// Récupère les figures pour le slider
+const figures = document.querySelectorAll("figure");
+// Récupère le nombre d'éléments figures à récupérer
+const nbSlide = figures.length;
+// Récupère les boutons suivant et précédent
+const suivant = document.querySelector(".right");
+const precedent = document.querySelector(".left");
+
+let count = 0;
+
+const slideSuivant = () => {
+    figures[count].classList.remove("active");
+
+    if (count < nbSlide - 1) {
+        count++;
+    } else {
+        count = 0;
+    }
+
+    figures[count].classList.add("active");
 };
+suivant.addEventListener("click", slideSuivant);
 
 navSlide();
