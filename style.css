@@ -226,6 +226,10 @@ figure.active {
     border-radius: 20px; /* arrondis les bords */
 }
 
+.bouton-nav:hover {
+    background: rgba(20, 34, 138, 28);
+}
+
 @media screen and (max-width: 768px) {
     /** Modification des marges de l'écran lorsque sa taille est plus faible */
     main {
