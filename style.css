@@ -209,9 +209,8 @@ figure.active {
 .container-bouton {
     width: 100%;
     height: auto;
-    border: 1px solid #000;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3); /* Rajoute une sorte d'ombre */
     display: flex;
+    padding-bottom: 10px;
 }
 
 .bouton-nav {
@@ -220,6 +219,11 @@ figure.active {
     font-size: 25px;
     margin: 0 15px;
     cursor: pointer;
+    background: rgba(34, 44, 148, 58);
+    color: white;
+    border: 1px solid rgb(53, 53, 153);
+    box-shadow: 0 10px 10px rgba(11, 34, 235, 0.349); /* Rajoute une sorte d'ombre */
+    border-radius: 20px; /* arrondis les bords */
 }
 
 @media screen and (max-width: 768px) {
