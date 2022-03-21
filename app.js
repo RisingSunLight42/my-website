@@ -64,4 +64,14 @@ const slidePrecedente = () => {
 };
 precedent.addEventListener("click", slideSuivant);
 
+const keyPress = (e) => {
+    // Sert à gérer la galerie via les flèches, le code 37 correspond à la flèche gauche, 39 à la flèche droite
+    if (e.keyCode === 37) {
+        slidePrecedente();
+    } else if (e.keyCode === 39) {
+        slideSuivant();
+    }
+};
+document.addEventListener("keydown", keyPress);
+
 navSlide();
