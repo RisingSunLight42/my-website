@@ -182,10 +182,14 @@ Dans le cas que j'ai utilisé, .galerie h2 fonctionne aussi */
 
 .slider figure {
     display: none;
+    width: 100%;
+    height: 50vh;
+    text-align: center;
 }
 
 .slider figure img {
     max-width: 100%;
+    max-height: 95%;
 }
 
 figure.active {
