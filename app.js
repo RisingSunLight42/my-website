@@ -28,17 +28,17 @@ const navSlide = () => {
     });
 };
 
-// Récupère les figures pour le slider
-const figures = document.querySelectorAll("figure");
-// Récupère le nombre d'éléments figures à récupérer
-const nbSlide = figures.length;
-// Récupère les boutons suivant et précédent
-const suivant = document.querySelector(".right");
-const precedent = document.querySelector(".left");
-
-let count = 0;
-
 const sliderGalerie = () => {
+    // Récupère les figures pour le slider
+    const figures = document.querySelectorAll("figure");
+    // Récupère le nombre d'éléments figures à récupérer
+    const nbSlide = figures.length;
+    // Récupère les boutons suivant et précédent
+    const suivant = document.querySelector(".right");
+    const precedent = document.querySelector(".left");
+
+    let count = 0;
+
     const slideSuivant = () => {
         figures[count].classList.remove("active");
 
