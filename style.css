@@ -252,6 +252,18 @@ a {
     border: 1px solid #333;
 }
 
+.onglets {
+    /* Propriété permettant de forcer à se répartir équitablement l'espace : 0 = prend tout, 1 = adapte toi,
+    avec la combinaison de 0 et de 1, on permet une répartition équitable en tier*/
+    display: flex;
+    flex: 1 1 0;
+    text-align: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 700; /* Augmente le gras */
+    cursor: pointer;
+}
+
 .choses-aimees ul {
     margin-left: 15px;
 }
