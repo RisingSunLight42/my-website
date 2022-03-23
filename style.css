@@ -152,7 +152,7 @@ nav {
 /** Partie corps de la page */
 
 body {
-    background-color: rgba(110, 123, 255, 100);
+    background-color: rgba(110, 110, 245, 100);
 }
 
 main {
@@ -245,7 +245,7 @@ a {
 
 .conteneur_choses_aimees {
     height: 30vh;
-    border: 1px solid #333;
+    background-color: rgba(110, 123, 255, 100);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     position: relative; /* Indication d'une position relative sans déplacement pour pouvoir mettre une position absolute sur les contenus sans incidents*/
 }
