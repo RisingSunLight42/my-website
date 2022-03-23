@@ -281,6 +281,19 @@ a {
     opacity: 0; /* Masque les contenus, le contenu sera affiché que s'il a la classe contenuActif */
 }
 
+.contenu h3 {
+    padding: 15px 0px 10px 20px; /* Ajout d'un padding pour que ce soit plus propre */
+}
+
+.contenu hr {
+    /* Stylise le séparateur pour qu'il soit plus joli*/
+    width: 25%;
+    height: 2px;
+    margin-left: 20px;
+    background: #000;
+    border: none;
+}
+
 .contenu p {
     padding: 20px;
 }
