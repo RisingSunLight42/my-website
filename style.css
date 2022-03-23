@@ -241,13 +241,14 @@ a {
 
 /** Gestion de la partie des choses aimées */
 
-.choses-aimees {
+.conteneur_choses_aimees {
+    height: 30vh;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .conteneur_onglets {
     width: 100%;
-    height: 30%;
+    height: 25%;
     display: flex;
     border: 1px solid #333;
 }
@@ -257,11 +258,16 @@ a {
     avec la combinaison de 0 et de 1, on permet une répartition équitable en tier*/
     display: flex;
     flex: 1 1 0;
-    text-align: center;
     justify-content: center;
+    align-items: center;
     font-size: 22px;
     font-weight: 700; /* Augmente le gras */
     cursor: pointer;
+}
+
+.onglets:not(:nth-child(3)) {
+    /* Permet d'ajouter une bordure à droite sauf pour l'enfant 3 (le dernier) */
+    border-right: 1px solid #333;
 }
 
 .choses-aimees ul {
