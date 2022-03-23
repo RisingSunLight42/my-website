@@ -245,14 +245,16 @@ a {
 
 .conteneur_choses_aimees {
     height: 30vh;
+    border: 1px solid #333;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative; /* Indication d'une position relative sans déplacement pour pouvoir mettre une position absolute sur les contenus sans incidents*/
 }
 
 .conteneur_onglets {
     width: 100%;
     height: 25%;
     display: flex;
-    border: 1px solid #333;
+    border-bottom: 1px solid #333;
 }
 
 .onglets {
@@ -270,6 +272,12 @@ a {
 .onglets:not(:nth-child(3)) {
     /* Permet d'ajouter une bordure à droite sauf pour l'enfant 3 (le dernier) */
     border-right: 1px solid #333;
+}
+
+.contenu {
+    height: 75%;
+    width: 100%;
+    position: absolute;
 }
 
 .choses-aimees ul {
