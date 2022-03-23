@@ -190,10 +190,10 @@ iframe {
 
 figure.active {
     display: block;
-    animation: Sliderfade 0.8s;
+    animation: fade 0.8s;
 }
 
-@keyframes Sliderfade {
+@keyframes fade {
     from {
         opacity: 0;
     }
@@ -278,15 +278,25 @@ a {
     height: 75%;
     width: 100%;
     position: absolute;
+    opacity: 0; /* Masque les contenus, le contenu sera affiché que s'il a la classe contenuActif */
 }
 
-.choses-aimees ul {
-    margin-left: 15px;
+.contenu p {
+    padding: 20px;
 }
 
-.classement {
-    margin-left: 5px;
+/** Animation des onglets et contenus */
+.ongletActif {
+    background: rgba(20, 34, 138, 28);
+    color: #f1f1f1;
+    transition: all 0.3s ease; /* Permet de faire une jolie transition */
 }
+
+.contenuActif {
+    animation: fade 0.5s forwards; /* Appelle l'animation fade définie en keyframe plus haut */
+}
+
+/** Partie formulaire et avis */
 
 /* focus désigne lorsque l'objet est sélectionné */
 input:focus {
