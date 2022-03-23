@@ -170,12 +170,6 @@ iframe {
     height: 315px;
 }
 
-/* Le combinateur > permet de cible l'enfant du parent sélectionné, tandis que + l'élément suivant
-Dans le cas que j'ai utilisé, .galerie h2 fonctionne aussi */
-.galerie > h2 {
-    color: rgb(226, 83, 27);
-}
-
 .galerie .slider {
     padding: 10px;
 }
