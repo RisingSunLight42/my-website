@@ -76,9 +76,30 @@ const sliderGalerie = () => {
     document.addEventListener("keydown", keyPress);
 };
 
+const ongletChosesAimees = () => {
+    // Récupère les éléments ayant la class onglets et la class contenu
+    const onglets = document.querySelectorAll(".onglets");
+    const contenu = document.querySelectorAll(".contenu");
+    let index = 0;
+
+    onglets.forEach((onglet) => {
+        // Pour chaque onglet
+        onglet.addEventListener("click", () => {
+            // On définit ce qu'il se passe lors du clic
+            if (onglet.classList.contains("active")) {
+                // Si l'onglet a la classe active, on ne veut rien faire, donc return
+                return;
+            } else {
+                onglet.classList.add("active");
+            }
+        });
+    });
+};
+
 const app = () => {
     navSlide();
     sliderGalerie();
+    ongletChosesAimees();
 };
 
 app();
