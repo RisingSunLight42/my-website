@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-.masque-overflow {
+.masque-overflow-y {
     overflow-y: hidden;
 }
 
