@@ -229,14 +229,14 @@ figure.active {
 .bouton-nav:hover {
     background: rgba(20, 34, 138, 28);
 }
-
+/* Création de la barre centrale de la flèche*/
 .fleche {
     width: 20%;
     height: 2px;
     background: white;
     position: relative;
 }
-
+/* Crée les pseudos éléments pour faire la pointe de la flèche, content est nécessaire pour qu'ils apparaissent*/
 .fleche::before,
 .fleche::after {
     content: "";
@@ -244,14 +244,17 @@ figure.active {
     height: 2px;
     background: white;
     position: absolute;
-    right: 0;
     top: 0;
 }
-
+/* Positionne à gauche pour les flèches gauches*/
 .fleche.gauche::before,
 .fleche.gauche::after {
     left: 0;
-    top: 0;
+}
+/* Positionne à droite pour les flèches droites*/
+.fleche.droite::before,
+.fleche.droite::after {
+    right: 0;
 }
 
 @media screen and (max-width: 768px) {
