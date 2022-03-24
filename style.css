@@ -234,6 +234,18 @@ figure.active {
     width: 20%;
     height: 2px;
     background: white;
+    position: relative;
+}
+
+.fleche::before,
+.fleche::after {
+    content: "";
+    width: 20%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 @media screen and (max-width: 768px) {
