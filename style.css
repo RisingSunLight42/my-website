@@ -231,7 +231,7 @@ figure.active {
 }
 /* Création de la barre centrale de la flèche*/
 .fleche {
-    width: 20%;
+    width: 25%;
     height: 2px;
     background: white;
     position: relative;
@@ -240,23 +240,26 @@ figure.active {
 .fleche::before,
 .fleche::after {
     content: "";
-    width: 20%;
+    width: 10%;
     height: 2px;
     background: white;
     position: absolute;
+    right: 0;
     top: 0;
 }
-/* Positionne à gauche pour les flèches gauches*/
-.fleche.gauche::before,
-.fleche.gauche::after {
-    left: 0;
+
+.fleche::before {
+    transform: rotate(45deg);
+    transform-origin: right bottom;
 }
-/* Positionne à droite pour les flèches droites*/
-.fleche.droite::before,
-.fleche.droite::after {
-    right: 0;
+.fleche::after {
+    transform: rotate(-45deg);
+    transform-origin: right top;
 }
 
+.fleche.gauche {
+    transform: rotate(180deg);
+}
 @media screen and (max-width: 768px) {
     /** Modification des marges de l'écran lorsque sa taille est plus faible */
     main {
