@@ -210,9 +210,13 @@ figure.active {
 }
 
 .bouton-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-grow: 1; /* Permet de dire de prendre tout l'espace disponible restant */
     text-align: center;
     font-size: 25px;
+    height: 3vh;
     margin: 0 15px;
     cursor: pointer;
     background: rgba(34, 44, 148, 58);
@@ -224,6 +228,12 @@ figure.active {
 
 .bouton-nav:hover {
     background: rgba(20, 34, 138, 28);
+}
+
+.fleche {
+    width: 20%;
+    height: 2px;
+    background: white;
 }
 
 @media screen and (max-width: 768px) {
