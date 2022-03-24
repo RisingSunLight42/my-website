@@ -248,6 +248,12 @@ figure.active {
     top: 0;
 }
 
+.fleche.gauche::before,
+.fleche.gauche::after {
+    left: 0;
+    top: 0;
+}
+
 @media screen and (max-width: 768px) {
     /** Modification des marges de l'écran lorsque sa taille est plus faible */
     main {
