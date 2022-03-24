@@ -245,6 +245,7 @@ a {
 
 .conteneur_choses_aimees {
     height: fit-content; /* Fait en sorte que la hauteur colle au contenu */
+    min-height: 25vh;
     background-color: rgba(110, 123, 255, 100);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     position: relative; /* Indication d'une position relative sans déplacement pour pouvoir mettre une position absolute sur les contenus sans incidents*/
