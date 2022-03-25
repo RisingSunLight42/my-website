@@ -29,15 +29,18 @@ const navSlide = () => {
 };
 
 const animationFooter = () => {
+    // Récupère les éléments que l'on souhaite animer
+    const nav = document.getElementsByTagName("nav")[0];
+    const footer = document.getElementsByTagName("footer")[0];
     // Quand le chargement commence, s'assure que la classe d'animation est retirée
     window.addEventListener("loadstart", () => {
-        const footer = document.getElementsByTagName("footer")[0];
         footer.classList.remove("affichageFooter");
+        nav.classList.remove("navAnim");
     });
-    // Quand le chargement est terminé, lance l'animation en attribuant la classe au footer
+    // Quand le chargement est terminé, lance l'animation en attribuant la classe à l'élément que l'on souhaite animer
     window.addEventListener("load", () => {
-        const footer = document.getElementsByTagName("footer")[0];
         footer.classList.add("affichageFooter");
+        nav.classList.add("navAnim");
     });
 };
 
