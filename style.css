@@ -240,7 +240,7 @@ figure.active {
 .fleche::before,
 .fleche::after {
     content: "";
-    width: 10%;
+    width: 10px;
     height: 2px;
     background: white;
     position: absolute;
