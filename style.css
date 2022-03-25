@@ -301,6 +301,12 @@ a {
     align-items: center;
     font-size: 22px;
     font-weight: 700; /* Augmente le gras */
+}
+
+/* hover sur les onglets qui ne sont pas affichés (pour sous entendre qu'ils sont cliquables)  */
+.onglets:hover:not(.ongletActif) {
+    background: rgb(34, 44, 148);
+    color: #f1f1f1;
     cursor: pointer;
 }
 
