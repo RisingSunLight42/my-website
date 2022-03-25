@@ -112,10 +112,24 @@ const ongletChosesAimees = () => {
     });
 };
 
+const animationFooter = () => {
+    // Quand le chargement commence, s'assure que la classe d'animation est retirée
+    window.addEventListener("loadstart", () => {
+        const footer = document.getElementsByTagName("footer")[0];
+        footer.classList.remove("affichageFooter");
+    });
+    // Quand le chargement est terminé, lance l'animation en attribuant la classe au footer
+    window.addEventListener("load", () => {
+        const footer = document.getElementsByTagName("footer")[0];
+        footer.classList.add("affichageFooter");
+    });
+};
+
 const app = () => {
     navSlide();
     sliderGalerie();
     ongletChosesAimees();
+    animationFooter();
 };
 
 app();
