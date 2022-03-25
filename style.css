@@ -11,7 +11,7 @@
 }
 
 main {
-    animation: mainAnim 1s ease-out;
+    animation: mainAnim 1.5s ease-out;
 }
 
 @keyframes mainAnim {
@@ -32,9 +32,26 @@ nav {
     justify-content: space-around;
     align-items: stretch;
     min-height: 8vh;
+    opacity: 0;
     color: #f1f1f1;
     background-color: rgba(34, 44, 148, 58);
     font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.navAnim {
+    animation: animNav 1.5s;
+    opacity: 1;
+}
+
+@keyframes animNav {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
 }
 
 .titre-page {
