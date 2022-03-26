@@ -461,3 +461,10 @@ footer {
         opacity: 1;
     }
 }
+
+/** Partie Réseaux */
+
+.reseaux p {
+    text-align: center;
+    line-height: 3vh;
+}
