@@ -6,10 +6,6 @@
     box-sizing: border-box;
 }
 
-.masque-overflow-y {
-    overflow-y: hidden;
-}
-
 main {
     animation: mainAnim 1.5s ease-out;
 }
@@ -33,6 +29,7 @@ nav {
     align-items: stretch;
     min-height: 8vh;
     opacity: 0;
+    width: 100%;
     color: #f1f1f1;
     background-color: rgba(34, 44, 148, 58);
     font-family: Georgia, "Times New Roman", Times, serif;
@@ -154,6 +151,11 @@ nav {
 /* Sert quand le burger sera cliqué -> la classe de nav-links deviendra active pour faire apparaître les éléments de navigation*/
 .nav-active {
     transform: translateX(0%);
+    position: fixed;
+}
+
+.nav-bar-active {
+    position: fixed;
 }
 
 /* La partie ci-dessous permet de réaliser une animation grâce à JS */
