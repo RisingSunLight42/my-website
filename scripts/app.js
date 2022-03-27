@@ -42,6 +42,10 @@ const animationFooter = () => {
     window.addEventListener("load", () => {
         footer.classList.add("affichageFooter");
         nav.classList.add("navAnim");
+        nav.style.opacity = 1;
+        setTimeout(() => {
+            nav.classList.remove("navAnim");
+        }, 1000);
     });
 };
 
