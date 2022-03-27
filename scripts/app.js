@@ -9,7 +9,17 @@ const navSlide = () => {
     burger.addEventListener("click", () => {
         //* La fonction ci-dessous permet d'ajouter la classe de l'élément en la classe passée en paramètre
         nav.classList.toggle("nav-active");
-        navBar.classList.toggle("nav-bar-active");
+        // Suivant la classe présente, ajoute l'autre classe
+        if (navBar.classList[0] == "nav-bar-active") {
+            navBar.classList.remove("nav-bar-active");
+            navBar.classList.add("nav-bar-inactive");
+        } else if (
+            navBar.classList[0] == "nav-bar-inactive" ||
+            navBar.classList[0] == undefined
+        ) {
+            navBar.classList.remove("nav-bar-inactive");
+            navBar.classList.add("nav-bar-active");
+        }
 
         //* Animation des liens
         navLinks.forEach((link, index) => {
