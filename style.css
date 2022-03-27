@@ -159,15 +159,32 @@ nav {
     z-index: 1;
     width: 50%;
     right: 0;
-    animation: transi 1s;
+    animation: transiActif 1s;
 }
 
-@keyframes transi {
+.nav-bar-inactive {
+    animation: transiInactif 1s;
+}
+
+@keyframes transiActif {
     from {
         width: 100%;
     }
     to {
         width: 50%;
+    }
+}
+
+@keyframes transiInactif {
+    from {
+        position: fixed;
+        right: 0;
+        width: 50%;
+    }
+    to {
+        position: fixed;
+        right: 0;
+        width: 100%;
     }
 }
 
