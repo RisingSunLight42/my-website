@@ -36,8 +36,7 @@ nav {
 }
 
 .navAnim {
-    animation: animNav 1.5s;
-    opacity: 1;
+    animation: animNav 1s;
 }
 
 @keyframes animNav {
@@ -152,10 +151,24 @@ nav {
 .nav-active {
     transform: translateX(0%);
     position: fixed;
+    z-index: 1;
 }
 
 .nav-bar-active {
     position: fixed;
+    z-index: 1;
+    width: 50%;
+    right: 0;
+    animation: transi 1s;
+}
+
+@keyframes transi {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 50%;
+    }
 }
 
 /* La partie ci-dessous permet de réaliser une animation grâce à JS */
