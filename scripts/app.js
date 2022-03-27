@@ -2,6 +2,7 @@ const navSlide = () => {
     // document.querySelector permet de récupérer un objet donné, comme une classe par exemple
     const burger = document.querySelector(".burger");
     const navBar = document.getElementsByTagName("nav")[0];
+    const main = document.getElementsByTagName("main")[0];
     const nav = document.querySelector(".nav-links");
     const navLinks = document.querySelectorAll(".nav-links li"); // Récupère tous les li de la classe nav-links
 
@@ -13,12 +14,14 @@ const navSlide = () => {
         if (navBar.classList[0] == "nav-bar-active") {
             navBar.classList.remove("nav-bar-active");
             navBar.classList.add("nav-bar-inactive");
+            main.classList.add("mainAnim");
         } else if (
             navBar.classList[0] == "nav-bar-inactive" ||
             navBar.classList[0] == undefined
         ) {
             navBar.classList.remove("nav-bar-inactive");
             navBar.classList.add("nav-bar-active");
+            main.classList.remove("mainAnim");
         }
 
         //* Animation des liens
