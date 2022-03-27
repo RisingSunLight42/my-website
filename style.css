@@ -21,6 +21,19 @@ main {
     }
 }
 
+.mainAnim {
+    animation: mainTranslate 1s;
+}
+
+@keyframes mainTranslate {
+    from {
+        margin-top: 2vh;
+    }
+    to {
+        margin-top: 10.6vh;
+    }
+}
+
 /** Partie navigation */
 
 nav {
@@ -154,6 +167,7 @@ nav {
     z-index: 1;
 }
 
+/* Suivant si la navBar est active ou non, on joue une certaine animation pour rendre le tout plus smooth*/
 .nav-bar-active {
     position: fixed;
     z-index: 1;
@@ -228,8 +242,8 @@ main {
 h1,
 h2 {
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
 }
 
 iframe {
