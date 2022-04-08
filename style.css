@@ -530,3 +530,11 @@ section.reseaux {
     gap: 30px 30px;
     margin: 80px 0px;
 }
+
+.card_wrapper {
+    /* sert à l'animation de l'élément */
+    position: relative;
+    min-height: 350px;
+    perspective: 2000px;
+    perspective-origin: top;
+}
