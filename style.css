@@ -574,3 +574,13 @@ section.reseaux {
     font-size: 25px;
     line-height: 35px;
 }
+
+.card_back {
+    background: #eb5d34;
+    transform: rotateY(
+        180deg
+    ); /* permet de faire afficher l'arrière que quand c'est voulu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
