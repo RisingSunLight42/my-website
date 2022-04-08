@@ -551,3 +551,12 @@ section.reseaux {
     color: white;
     font-weight: bold;
 }
+
+.card_front,
+.card_back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    border-radius: 8px;
+}
