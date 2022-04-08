@@ -569,3 +569,8 @@ section.reseaux {
     flex-direction: column;
     justify-content: space-between;
 }
+
+.card_front p {
+    font-size: 25px;
+    line-height: 35px;
+}
