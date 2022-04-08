@@ -514,3 +514,11 @@ footer {
     text-align: center;
     line-height: 3vh;
 }
+
+/* Cards */
+
+section.reseaux {
+    /* Fixe la taille du conteneur de la partie réseaux pour les cards*/
+    margin: auto;
+    max-width: 1400px;
+}
