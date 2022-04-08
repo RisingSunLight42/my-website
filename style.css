@@ -522,3 +522,11 @@ section.reseaux {
     margin: auto;
     max-width: 1400px;
 }
+
+.card_container {
+    /* Fait un affichage grid qui remplit autant de cartes que possible avec hauteur min 350px, et 1fr max*/
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px 30px;
+    margin: 80px 0px;
+}
