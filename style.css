@@ -514,3 +514,92 @@ footer {
     text-align: center;
     line-height: 3vh;
 }
+
+/* Cards */
+
+section.reseaux {
+    /* Fixe la taille du conteneur de la partie réseaux pour les cards*/
+    margin: auto;
+    max-width: 1400px;
+}
+
+.card_container {
+    /* Fait un affichage grid qui remplit autant de cartes que possible avec hauteur min 350px, et 1fr max*/
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px 30px;
+    margin: 80px 0px;
+}
+
+.card_wrapper {
+    /* sert à l'animation de l'élément */
+    position: relative;
+    min-height: 350px;
+    perspective: 2000px;
+    perspective-origin: top;
+}
+
+.card_wrapper:hover .card {
+    transform: rotateY(180deg);
+}
+
+.card {
+    position: relative;
+    height: 100%;
+    transform-style: preserve-3d; /* permet de garder l'environnement 3d définit dans card_wrapper */
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); /* cubic-bezier est un style d'animation en ease*/
+    color: white;
+    font-weight: bold;
+}
+
+.card_front,
+.card_back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    border-radius: 8px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.card_front {
+    background: #eb5d34;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card_front p {
+    font-size: 25px;
+    line-height: 35px;
+}
+
+.card_back {
+    background: #eb5d34;
+    transform: rotateY(
+        180deg
+    ); /* permet de faire afficher l'arrière que quand c'est voulu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_back a {
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: normal;
+    background-color: #fff;
+    font-size: 14px;
+    color: #333;
+    transition: background-color 0.3s ease-out, color 0.3s ease-out;
+}
+
+.card_back a:hover {
+    background-color: #1a2f42;
+    color: #fff;
+}
