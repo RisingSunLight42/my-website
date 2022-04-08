@@ -584,3 +584,17 @@ section.reseaux {
     justify-content: center;
     align-items: center;
 }
+
+.card_back a {
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: normal;
+    background-color: #fff;
+    font-size: 14px;
+    color: #333;
+    transition: background-color 0.3s ease-out, color 0.3s ease-out;
+}
