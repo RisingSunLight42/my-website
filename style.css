@@ -570,9 +570,10 @@ section.reseaux {
     justify-content: space-between;
 }
 
-.card_front p {
+.card_front h1 {
     font-size: 25px;
     line-height: 35px;
+    margin: 0;
 }
 
 .card_back {
