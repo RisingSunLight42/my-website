@@ -605,6 +605,12 @@ section.reseaux {
     color: #fff;
 }
 
+.card_back p {
+    font-size: 25px;
+    line-height: 35px;
+    letter-spacing: 1.5px;
+}
+
 .fleche.card_arrow {
     width: 7%;
     left: 95%;
