@@ -603,3 +603,8 @@ section.reseaux {
     background-color: #1a2f42;
     color: #fff;
 }
+
+.fleche.card_arrow {
+    width: 7%;
+    left: 95%;
+}
