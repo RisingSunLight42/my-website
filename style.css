@@ -564,7 +564,6 @@ section.reseaux {
 }
 
 .card_front {
-    background: #eb5d34;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -577,7 +576,6 @@ section.reseaux {
 }
 
 .card_back {
-    background: #eb5d34;
     transform: rotateY(
         180deg
     ); /* permet de faire afficher l'arrière que quand c'est voulu */
@@ -601,7 +599,7 @@ section.reseaux {
 }
 
 .card_back a:hover {
-    background-color: #1a2f42;
+    background-color: rgba(20, 34, 138, 28);
     color: #fff;
 }
 
