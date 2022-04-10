@@ -535,7 +535,6 @@ section.reseaux {
 .card_wrapper {
     /* sert à l'animation de l'élément */
     display: flex;
-    min-height: 350px;
     perspective: 2000px;
     perspective-origin: top;
 }
@@ -616,4 +615,12 @@ section.reseaux {
 .fleche.card_arrow {
     width: 7%;
     left: 95%;
+}
+
+@media screen and (max-width: 480px) {
+    /** Modification des tailles minimales des cards lorsque l'écran est plus petit */
+    .card_container {
+        /* Fait un affichage grid qui remplit autant de cartes que possible avec hauteur min 350px, et 1fr max*/
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
 }
