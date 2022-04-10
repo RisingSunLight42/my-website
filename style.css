@@ -548,7 +548,7 @@ section.reseaux {
     height: 100%;
     transform-style: preserve-3d; /* permet de garder l'environnement 3d définit dans card_wrapper */
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); /* cubic-bezier est un style d'animation en ease*/
-    color: white;
+    color: #f1f1f1;
     font-weight: bold;
 }
 
@@ -596,7 +596,7 @@ section.reseaux {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: normal;
-    background-color: #fff;
+    background-color: #f1f1f1;
     font-size: 14px;
     color: #333;
     transition: background-color 0.3s ease-out, color 0.3s ease-out;
@@ -604,7 +604,7 @@ section.reseaux {
 
 .card_back a:hover {
     background-color: rgba(20, 34, 138, 28);
-    color: #fff;
+    color: #f1f1f1;
 }
 
 .card_back p {
