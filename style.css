@@ -576,7 +576,7 @@ section.reseaux {
 }
 
 .card_front p {
-    text-align: justify;
+    text-align: left;
 }
 
 .card_back {
