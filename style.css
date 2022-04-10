@@ -575,6 +575,10 @@ section.reseaux {
     margin: 0;
 }
 
+.card_front p {
+    text-align: justify;
+}
+
 .card_back {
     transform: rotateY(
         180deg
