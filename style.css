@@ -567,6 +567,7 @@ section.reseaux {
     border-radius: 8px;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+    box-shadow: 5px 5px 10px rgba(11, 34, 235, 0.349); /* Rajoute une sorte d'ombre */
 }
 
 .card_front {
