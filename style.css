@@ -572,7 +572,6 @@ section.reseaux {
 .card_front {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .card_front h1 {
@@ -583,6 +582,7 @@ section.reseaux {
 
 .card_front p {
     text-align: left;
+    height: 100%;
 }
 
 .card_back {
