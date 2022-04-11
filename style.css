@@ -543,6 +543,11 @@ section.reseaux {
     transform: rotateY(180deg);
 }
 
+.card_wrapper:hover .fleche.card_arrow {
+    transform: translateX(10px);
+    transition: transform 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
 .card {
     display: flex;
     min-width: 100%;
@@ -613,8 +618,9 @@ section.reseaux {
 }
 
 .fleche.card_arrow {
-    width: 7%;
-    left: 95%;
+    transition: transform 0.3 ease;
+    width: 0%;
+    left: 100%;
 }
 
 @media screen and (max-width: 480px) {
