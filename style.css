@@ -638,3 +638,11 @@ section.reseaux {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
 }
+
+/** Partie work in progress */
+
+.WIP h1 {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+}
