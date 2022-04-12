@@ -495,14 +495,13 @@ footer {
     justify-content: center;
     text-align: center;
     position: fixed;
-    bottom: -10%;
     background-color: rgba(224, 198, 101, 88);
     color: #333;
 }
 
 .affichageFooter {
     animation: animFooter 1.5s ease;
-    bottom: 0%;
+    bottom: 0;
 }
 
 @keyframes animFooter {
@@ -511,7 +510,7 @@ footer {
         opacity: 0;
     }
     to {
-        bottom: 0%;
+        bottom: 0;
         opacity: 1;
     }
 }
