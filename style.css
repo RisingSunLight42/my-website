@@ -231,7 +231,8 @@ nav {
 /** Partie corps de la page */
 
 body {
-    background-color: rgba(110, 110, 245, 100);
+    background-color: rgb(100, 100, 224);
+    color: #f1f1f1;
 }
 
 main {
@@ -353,7 +354,6 @@ figure.active {
 Dans cet exemple, on colore les balises em lorsqu'elles suivent directement une balise image
 ET qu'elles sont enfant d'une balise de lien.*/
 a {
-    color: rgba(20, 14, 178, 100);
     text-decoration: none;
 }
 
@@ -490,6 +490,7 @@ footer {
     position: fixed;
     bottom: -10%;
     background-color: rgba(224, 198, 101, 88);
+    color: #333;
 }
 
 .affichageFooter {
