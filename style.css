@@ -403,6 +403,7 @@ a {
 .contenu {
     width: 100%;
     position: absolute;
+    top: -100%;
     opacity: 0; /* Masque les contenus, le contenu sera affiché que s'il a la classe contenuActif */
 }
 
@@ -441,6 +442,10 @@ a {
 /* focus désigne lorsque l'objet est sélectionné */
 input:focus {
     background-color: rgb(226, 214, 214);
+}
+
+input {
+    background-color: #fff;
 }
 
 #choix_avis {
