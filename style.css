@@ -651,12 +651,26 @@ section.reseaux {
 
 .container_patchnotes {
     width: 100%;
-    max-width: 900px;
-    min-width: 700px;
     height: auto;
     margin: 10px auto 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+}
+
+.patchnote {
+    width: 100%;
+    height: auto;
+    margin: 5px 0;
+}
+
+.visible_panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(53, 53, 153);
+    border-radius: 10px;
+    position: relative;
+    z-index: 100;
 }
