@@ -646,3 +646,17 @@ section.reseaux {
     display: flex;
     align-items: center;
 }
+
+/** Partie  patchnotes */
+
+.container_patchnotes {
+    width: 100%;
+    max-width: 900px;
+    min-width: 700px;
+    height: auto;
+    margin: 10px auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
