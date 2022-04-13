@@ -680,6 +680,7 @@ section.reseaux {
     font-size: 25px;
 }
 
+/* Crée un carré qui sera cliquable pour le menu déroulant*/
 .croix {
     display: block;
     justify-content: center;
@@ -690,25 +691,33 @@ section.reseaux {
     transform: rotate(-45deg);
     cursor: pointer;
 }
+
+/* Création des pseudos éléments */
 .croix::before,
 .croix::after {
     content: "";
     position: absolute;
     margin-right: 10px;
     top: 50%;
-    transform: translate(0, -75%);
-    width: 26px;
+    transform: translate(0, -50%);
+    width: 25px;
     height: 3px;
     border-radius: 2px;
     background: #f1f1f1;
 }
 
+/* rotate des pseudos éléments pour faire une croix, vu que leur parent est tourné, ça donne un +*/
 .croix::before {
     transform: rotate(45deg);
 }
 
 .croix::after {
     transform: rotate(-45deg);
+}
+
+.anim_changement_etat {
+    transform: rotate(0);
+    animation: transform 0.5s ease;
 }
 
 .toggle_panel {
