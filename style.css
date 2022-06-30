@@ -725,3 +725,12 @@ section.reseaux {
     height: 0;
     opacity: 0;
 }
+
+.toggle_panel h4 {
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+.toggle_panel p {
+    line-height: 1.5;
+}
