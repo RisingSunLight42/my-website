@@ -62,13 +62,13 @@ const ongletChosesAimees = () => {
                 // Si l'onglet a la classe active, on ne veut rien faire, donc return
                 return;
             } else {
-                for (i = 0; i < onglets.length; i++) {
+                for (let i = 0; i < onglets.length; i++) {
                     // Parcours les onglets pour retirer la class ongletActif si présente
                     onglets[i].classList.remove("ongletActif");
                 }
                 onglet.classList.add("ongletActif"); // Ajoute ensuite la class à l'onglet voulu
 
-                for (j = 0; j < contenu.length; j++) {
+                for (let j = 0; j < contenu.length; j++) {
                     // Parcours les contenus et vérifie si leur attribut data-anim correspond à l'index de l'onglet
                     if (contenu[j].getAttribute("data-anim") == index) {
                         // Si oui, on l'affiche, sinon on le cache
