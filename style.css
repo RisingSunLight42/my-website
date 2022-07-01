@@ -734,3 +734,32 @@ section.reseaux {
 .toggle_panel p {
     line-height: 1.5;
 }
+
+/* Partie projets */
+
+.projet_head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(53, 53, 153);
+    border-radius: 100px;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    padding: 10px 0px 10px 0px;
+}
+
+.presentation_projet {
+    display: block;
+}
+
+.presentation_projet figure {
+    max-width: 25vw;
+    float: left;
+    padding-right: 10px;
+}
+
+.presentation_projet figure img {
+    max-width: 25vw;
+    max-height: 20vh;
+    object-fit: contain;
+}
