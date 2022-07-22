@@ -651,9 +651,9 @@ section.reseaux {
     align-items: center;
 }
 
-/** Partie  patchnotes */
+/** Partie menu déroulant */
 
-.container_patchnotes {
+.container_deroulant {
     width: 100%;
     height: auto;
     margin: 10px auto 0;
@@ -663,7 +663,7 @@ section.reseaux {
     align-items: flex-start;
 }
 
-.patchnote {
+.menu_deroulant {
     width: 100%;
     height: auto;
     margin: 5px 0;
