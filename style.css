@@ -791,3 +791,11 @@ section.reseaux {
     margin: auto;
     height: 400px;
 }
+
+.liste_note p {
+    text-indent: 25%;
+}
+
+.liste_note p::before {
+    content: "- ";
+}
