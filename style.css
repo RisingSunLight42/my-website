@@ -499,6 +499,7 @@ footer {
     justify-content: center;
     text-align: center;
     position: fixed;
+    z-index: 1000;
     background-color: rgba(224, 198, 101, 88);
     color: #333;
 }
@@ -781,4 +782,12 @@ section.reseaux {
 
 .under_image {
     display: inline-block;
+}
+
+/** Partie anime review */
+
+.img_anime_review {
+    display: block;
+    margin: auto;
+    height: 400px;
 }
