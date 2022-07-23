@@ -753,17 +753,20 @@ section.reseaux {
     padding: 10px 0px 10px 0px;
 }
 
-.presentation_projet {
+.presentation_projet,
+.anime_review {
     display: block;
 }
 
-.presentation_projet h4 {
+.presentation_projet h4,
+.anime_review h4 {
     text-align: center;
     font-size: 20px;
     line-height: 2;
 }
 
-.presentation_projet p {
+.presentation_projet p,
+.anime_review p {
     line-height: 1.25;
     text-indent: 5%;
 }
@@ -790,6 +793,10 @@ section.reseaux {
     display: block;
     margin: auto;
     height: 400px;
+}
+
+.anime_review p {
+    margin-bottom: 10px;
 }
 
 .liste_note p {
