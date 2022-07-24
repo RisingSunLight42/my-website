@@ -82,6 +82,12 @@ const ongletChosesAimees = () => {
     });
 };
 
+const sendNotice = () => {
+    console.log(
+        "Si tu regardes ici, bravo, tu as trouvé le premier easter egg du site !"
+    );
+};
+
 const appIndex = () => {
     sliderGalerie();
     ongletChosesAimees();
