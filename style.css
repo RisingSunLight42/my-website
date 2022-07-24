@@ -799,10 +799,13 @@ section.reseaux {
     margin-bottom: 10px;
 }
 
-.liste_note p {
+.liste_note p,
+.tdl p {
     text-indent: 25%;
+    text-align: left;
 }
 
-.liste_note p::before {
+.liste_note p::before,
+.tdl p::before {
     content: "- ";
 }
