@@ -33,7 +33,7 @@ const sliderGalerie = () => {
 
         figures[count].classList.add("active");
     };
-    precedent.addEventListener("click", slideSuivant);
+    precedent.addEventListener("click", slidePrecedente);
 
     const keyPress = (e) => {
         // Sert à gérer la galerie via les flèches, le code 37 correspond à la flèche gauche, 39 à la flèche droite
