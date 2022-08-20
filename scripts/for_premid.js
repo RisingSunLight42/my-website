@@ -28,6 +28,8 @@ const createDynamicPresencesCard = async () => {
     const presencesArray = await getMyPresencesDatas();
     for (const presence of presencesArray) {
         const newDiv = document.createElement("div");
+        newDiv.className = "card_front premid";
+        newDiv.style = `background-color: ${presence.metadata.color}`;
         const presenceName = document.createTextNode(presence.metadata.service);
         newDiv.appendChild(presenceName);
         document.querySelector("main").appendChild(newDiv);
