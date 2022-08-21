@@ -27,16 +27,17 @@ const getMyPresencesDatas = async () => {
 const createDynamicPresencesCard = async () => {
     const presencesArray = await getMyPresencesDatas();
     for (const presence of presencesArray) {
+        const meta = presence.metadata;
         // Partie carte
         const divCard = document.createElement("div");
         divCard.className = "card_front premid";
-        divCard.style = `background-color: ${presence.metadata.color}`;
+        divCard.style = `border: 3px solid ${meta.color}`;
 
         // Partie image
         const divFill = document.createElement("div");
         divFill.className = "fill";
         const img = document.createElement("img");
-        img.src = presence.metadata.logo;
+        img.src = meta.logo;
         divFill.appendChild(img);
 
         //* Création infos
@@ -45,15 +46,14 @@ const createDynamicPresencesCard = async () => {
 
         // Partie titre
         const title = document.createElement("h2");
-        const presenceName = document.createTextNode(presence.metadata.service);
+        const presenceName = document.createTextNode(meta.service);
         title.appendChild(presenceName);
         divInfo.appendChild(title);
 
         // Partie paragraphe
         const description = document.createElement("p");
         const textDesc = document.createTextNode(
-            presence.metadata.description?.fr ??
-                presence.metadata.description.en
+            meta.description?.fr ?? meta.description.en
         );
         description.appendChild(textDesc);
         divInfo.appendChild(description);
@@ -66,10 +66,8 @@ const createDynamicPresencesCard = async () => {
             document.createElement("p"),
         ];
         const [textCategorie, textVersion, textUsers] = [
-            document.createTextNode(
-                `Catégorie : ${presence.metadata.category}`
-            ),
-            document.createTextNode(`Version : ${presence.metadata.version}`),
+            document.createTextNode(`Catégorie : ${meta.category}`),
+            document.createTextNode(`Version : ${meta.version}`),
             document.createTextNode(`Utilisateurs : ${presence.users}`),
         ];
         paragrapheCategorie.appendChild(textCategorie);

@@ -813,6 +813,8 @@ section.reseaux {
     justify-content: space-between;
     padding: 15px;
     margin-bottom: 2vh;
+    background-color: #050358;
+    align-items: center;
 }
 
 .fill {
@@ -860,4 +862,16 @@ section.reseaux {
 
 .info.premid div > *:last-child {
     padding-right: 0;
+}
+
+@media screen and (max-width: 500px) {
+    /** Modification des tailles minimales des cards lorsque l'écran est plus petit */
+    .card_front.premid {
+        flex-direction: column;
+    }
+
+    .info.premid {
+        width: 100%;
+        padding-left: 0px;
+    }
 }
