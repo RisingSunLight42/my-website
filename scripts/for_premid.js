@@ -60,22 +60,16 @@ const createDynamicPresencesCard = async () => {
 
         // Partie stats
         const divStats = document.createElement("div");
-        const [paragrapheCategorie, paragrapheVersion, paragrapheUsers] = [
-            document.createElement("p"),
-            document.createElement("p"),
-            document.createElement("p"),
-        ];
-        const [textCategorie, textVersion, textUsers] = [
-            document.createTextNode(`Catégorie : ${meta.category}`),
-            document.createTextNode(`Version : ${meta.version}`),
-            document.createTextNode(`Utilisateurs : ${presence.users}`),
-        ];
-        paragrapheCategorie.appendChild(textCategorie);
-        paragrapheVersion.appendChild(textVersion);
-        paragrapheUsers.appendChild(textUsers);
-        divStats.appendChild(paragrapheCategorie);
-        divStats.appendChild(paragrapheVersion);
-        divStats.appendChild(paragrapheUsers);
+        for (const stat of [
+            `Catégorie : ${meta.category}`,
+            `Version : ${meta.version}`,
+            `Utilisateurs : ${presence.users}`,
+        ]) {
+            const paragrapheStat = document.createElement("p");
+            const texteStat = document.createTextNode(stat);
+            paragrapheStat.appendChild(texteStat);
+            divStats.appendChild(paragrapheStat);
+        }
         divInfo.appendChild(divStats);
 
         // Complétion carte
