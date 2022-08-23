@@ -36,6 +36,7 @@ const createDynamicPresencesCard = async (author) => {
         // Partie carte
         const divCard = document.createElement("div");
         divCard.className = "card_front premid";
+        divCard.id = meta.service;
         divCard.style = `border: 3px solid ${meta.color}`;
 
         // Partie image
