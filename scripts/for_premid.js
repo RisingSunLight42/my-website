@@ -1,4 +1,4 @@
-const getMyPresencesDatas = async () => {
+const getMyPresencesDatas = async (author) => {
     const response = await fetch("https://api.premid.app/v3", {
         method: "POST",
         headers: {
@@ -6,7 +6,9 @@ const getMyPresencesDatas = async () => {
         },
         body: JSON.stringify({
             query: `
-            { presences (author: "240521747852558347") {
+            { presences (${
+                author ? "author" : "contributor"
+            }: "240521747852558347") {
                 metadata {
                     service,
                     description,
@@ -21,11 +23,14 @@ const getMyPresencesDatas = async () => {
         }),
     });
     const data = await response.json();
-    return data.data.presences;
+    const presencesUsersSorted = data.data.presences.sort(
+        (a, b) => b.users - a.users
+    );
+    return presencesUsersSorted;
 };
 
-const createDynamicPresencesCard = async () => {
-    const presencesArray = await getMyPresencesDatas();
+const createDynamicPresencesCard = async (author) => {
+    const presencesArray = await getMyPresencesDatas(author);
     for (const presence of presencesArray) {
         const meta = presence.metadata;
         // Partie carte
@@ -76,12 +81,15 @@ const createDynamicPresencesCard = async () => {
         divCard.appendChild(divFill);
         divCard.appendChild(divInfo);
 
-        document.querySelector("main").appendChild(divCard);
+        document
+            .querySelector(`section#${author ? "author" : "contributor"}`)
+            .appendChild(divCard);
     }
 };
 
 const PremidPage = async () => {
-    await createDynamicPresencesCard();
+    await createDynamicPresencesCard(true);
+    await createDynamicPresencesCard(false);
 };
 
 PremidPage();
