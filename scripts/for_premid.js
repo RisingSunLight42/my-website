@@ -31,6 +31,7 @@ const getMyPresencesDatas = async (author) => {
 
 const createDynamicPresencesCard = async (author) => {
     const presencesArray = await getMyPresencesDatas(author);
+    let total_user = 0;
     for (const presence of presencesArray) {
         const meta = presence.metadata;
         // Partie carte
@@ -85,6 +86,19 @@ const createDynamicPresencesCard = async (author) => {
         document
             .querySelector(`section#${author ? "author" : "contributor"}`)
             .appendChild(divCard);
+        total_user += presence.users;
+    }
+
+    //* Gère ma carte personnelle
+    document.getElementById(
+        `presence_${author ? "created" : "contributed"}`
+    ).textContent = `${
+        author ? "Présences créées" : "Présences contribuées"
+    } : ${presencesArray.length}`;
+    if (author) {
+        document.getElementById(
+            "total_user"
+        ).textContent = `Utilisateurs totaux : ${total_user}`;
     }
 };
 

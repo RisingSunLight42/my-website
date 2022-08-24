@@ -874,10 +874,6 @@ section.reseaux {
         width: 100%;
         padding-left: 0px;
     }
-}
-
-@media screen and (max-width: 350px) {
-    /** Modification des tailles minimales des cards lorsque l'écran est plus petit */
 
     .info.premid div {
         flex-direction: column;
