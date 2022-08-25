@@ -42,7 +42,7 @@ const createDynamicPresencesCard = async (author) => {
 
         // Partie image
         const divFill = document.createElement("div");
-        divFill.className = "fill";
+        divFill.className = "fill premid";
         const img = document.createElement("img");
         img.src = meta.logo;
         divFill.appendChild(img);
