@@ -749,9 +749,35 @@ section.reseaux {
     padding: 10px 0px 10px 0px;
 }
 
-.presentation_projet,
-.anime_review {
-    display: block;
+.presentation_projet {
+    display: flex;
+    flex-direction: column;
+}
+
+.projet_info {
+    display: flex;
+}
+
+@media screen and (max-width: 1024px) {
+    .projet_info {
+        flex-direction: column;
+    }
+    .projet_info div {
+        margin-left: 0;
+    }
+    .projet_info {
+        align-items: center;
+    }
+}
+
+.projet_info img {
+    object-fit: contain;
+    max-width: 200px;
+    height: auto;
+}
+
+.projet_content {
+    margin-left: 5px;
 }
 
 .presentation_projet h4,
@@ -767,23 +793,11 @@ section.reseaux {
     text-indent: 5%;
 }
 
-.presentation_projet figure {
-    max-width: 25vw;
-    float: left;
-    padding-right: 10px;
-}
-
-.presentation_projet figure img {
-    max-width: 25vw;
-    max-height: 20vh;
-    object-fit: contain;
-}
-
-.under_image {
-    display: inline-block;
-}
-
 /** Partie anime review */
+
+.anime_review {
+    display: block;
+}
 
 .img_anime_review {
     display: block;
@@ -822,11 +836,14 @@ section.reseaux {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    max-width: 128px;
-    max-height: 128px;
-    float: left;
     margin: auto, 0, auto, 0;
 }
+
+.fill.premid {
+    max-width: 128px;
+    max-height: 128px;
+}
+
 .fill img {
     min-width: 100%;
     min-height: 100%;
