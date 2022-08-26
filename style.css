@@ -166,13 +166,13 @@ nav {
 .nav-active {
     transform: translateX(0%);
     position: fixed;
-    z-index: 1;
+    z-index: 10000;
 }
 
 /* Suivant si la navBar est active ou non, on joue une certaine animation pour rendre le tout plus smooth*/
 .nav-bar-active {
     position: fixed;
-    z-index: 1;
+    z-index: 10000;
     width: 50%;
     right: 0;
     animation: transiActif 1s;
