@@ -899,3 +899,43 @@ section.reseaux {
         padding-left: 0;
     }
 }
+
+/* Partie to do list */
+
+table {
+    border-collapse: collapse;
+    border: 2px solid #050358;
+    width: 100%;
+}
+
+thead {
+    text-align: center;
+}
+
+tr :nth-child(1) {
+    width: 80%;
+    text-indent: 1%;
+}
+
+tr :nth-child(2) {
+    text-align: center;
+}
+
+tr {
+    border: 1px solid #050358;
+    height: 4vh;
+}
+
+tr:first-child {
+    border-top: none;
+}
+tr:last-child {
+    border-bottom: none;
+}
+
+.legend {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    margin-top: 2vh;
+}
