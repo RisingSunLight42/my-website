@@ -102,9 +102,32 @@ const createDynamicPresencesCard = async (author) => {
     }
 };
 
+const getToDoListElementState = async () => {
+    const elementStateArray = document.querySelectorAll(
+        'tbody > tr:not([style="text-align: center"])'
+    );
+    const stats = {
+        "✅": 0,
+        "⚙️": 0,
+        "📝": 0,
+        "❌": 0,
+    };
+
+    elementStateArray.forEach((element) => {
+        const elementTextClean = element.textContent.split("\n")[2].trim();
+        stats[elementTextClean] += 1;
+    });
+
+    Object.keys(stats).forEach((typeStat) => {
+        const element = document.getElementById(typeStat);
+        element.textContent = element.textContent.replace("?", stats[typeStat]);
+    });
+};
+
 const PremidPage = async () => {
     await createDynamicPresencesCard(true);
     await createDynamicPresencesCard(false);
+    await getToDoListElementState();
 };
 
 PremidPage();
