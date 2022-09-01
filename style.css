@@ -860,6 +860,11 @@ section.reseaux {
     margin-bottom: 1vh;
 }
 
+.info.premid a {
+    color: #f1f1f1;
+    text-decoration: underline;
+}
+
 /* Partie stats sous le texte de description */
 
 .info.premid div {

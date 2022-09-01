@@ -53,8 +53,11 @@ const createDynamicPresencesCard = async (author) => {
 
         // Partie titre
         const title = document.createElement("h2");
+        const link = document.createElement("a");
+        link.href = `https://premid.app/store/presences/${meta.service}`;
         const presenceName = document.createTextNode(meta.service);
-        title.appendChild(presenceName);
+        link.appendChild(presenceName);
+        title.appendChild(link);
         divInfo.appendChild(title);
 
         // Partie paragraphe
