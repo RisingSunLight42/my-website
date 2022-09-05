@@ -1,12 +1,14 @@
-const allCross = document.querySelectorAll(".croix"); // Récupère toutes les croix des panels
+const allPanel = document.querySelectorAll(".visible_panel"); // Récupère toutes les croix des panels
 
-allCross.forEach((cross) => {
-    cross.addEventListener("click", function () {
-        const height = this.parentNode.parentNode.childNodes[3].scrollHeight; // Récupère la hauteur de l'élément, même masque
-        const currentChoice = this.parentNode.parentNode.childNodes[3]; // Récupère l'élément
-        if (this.className.includes("anim_changement_etat")) {
+allPanel.forEach((panel) => {
+    panel.addEventListener("click", function () {
+        const height = this.parentNode.childNodes[3].scrollHeight; // Récupère la hauteur de l'élément, même masque
+        const currentChoice = this.parentNode.childNodes[3]; // Récupère l'élément
+        const cross = this.childNodes[3];
+
+        if (cross.className.includes("anim_changement_etat")) {
             // S'il y a la classe d'anim, on ferme l'encart
-            this.className = "croix";
+            cross.className = "croix";
             gsap.to(currentChoice, {
                 duration: 0.2,
                 height: 0,
@@ -15,7 +17,7 @@ allCross.forEach((cross) => {
             });
         } else {
             // S'il n'y a pas la classe d'anim, on ouvre l'encart
-            this.className = "croix anim_changement_etat";
+            cross.className = "croix anim_changement_etat";
             gsap.to(currentChoice, {
                 duration: 0.2,
                 height: height + 40,
