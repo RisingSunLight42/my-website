@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 main {
     animation: mainAnim 1.5s ease-out;
 }
@@ -943,4 +948,17 @@ tr:last-child {
     justify-content: space-around;
     align-items: stretch;
     margin-top: 2vh;
+}
+
+.centre {
+    height: 82vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.centre > div {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
 }
