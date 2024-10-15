@@ -1,0 +1,964 @@
+/* Mettre margin et padding à 0 permet manipuler le margin et padding de tous les enfants de la page à 0.
+    box-sizing: border-box permet d'éviter que quand l'on augmente la taille d'un élément, il le fasse vers l'extérieur et agrandisse la page.*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+main {
+    animation: mainAnim 1.5s ease-out;
+}
+
+@keyframes mainAnim {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+.mainAnim {
+    animation: mainTranslate 1s;
+}
+
+@keyframes mainTranslate {
+    from {
+        margin-top: 2vh;
+    }
+    to {
+        margin-top: 10.6vh;
+    }
+}
+
+/** Partie navigation */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    min-height: 8vh;
+    opacity: 0;
+    width: 100%;
+    color: #f1f1f1;
+    background-color: rgba(34, 44, 148, 58);
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.navAnim {
+    animation: animNav 1s;
+}
+
+@keyframes animNav {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.titre-page {
+    display: flex;
+    letter-spacing: 4px;
+    font-size: 20px;
+    align-items: center;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    list-style: none;
+    width: 50%;
+}
+
+.nav-links li {
+    display: flex;
+    align-items: stretch;
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    color: #f1f1f1;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 5px 5px;
+}
+
+.nav-links a:hover {
+    background-color: rgba(20, 34, 138, 28);
+}
+
+.burger {
+    display: none;
+}
+
+.conteneur-burger {
+    display: flex;
+    align-items: center;
+}
+
+.burger div {
+    width: 30px;
+    height: 4px;
+    margin: 5px;
+    background-color: #f1f1f1;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    /** Partie navigation */
+    .masque-overflow-x {
+        /* 
+        À cause du tag meta viewport, les balises html et body sont ignorées sur téléphone.
+        Il faut donc appliquer un overflow-x hidden et une position relative sur un div situé dans le body*/
+        overflow-x: hidden;
+        position: relative;
+    }
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 87vh;
+        top: 8vh;
+        background-color: rgba(34, 44, 148, 58);
+        display: flex;
+        flex-direction: column;
+        align-items: stretch; /* Met en stretch pour que les items à l'intérieur de nav links prenne toute la place*/
+        width: 50%;
+        transform: translateX(
+            100%
+        ); /* Permet de décaler vers la droite de 100% de la taille, masquant l'élément */
+        transition: transform 0.75s ease-in;
+    }
+    /* Masque les éléments de la liste, car on va les faire apparaître avec une animation.
+    Rajout que les conteners de list sont en flex direction column et que leurs items doivent prendre toute la place*/
+    .nav-links li {
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    /* Met les liens en flex (prennent donc toute la place) et les alignent au centre */
+    .nav-links a {
+        display: flex;
+        justify-content: center;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+/* Sert quand le burger sera cliqué -> la classe de nav-links deviendra active pour faire apparaître les éléments de navigation*/
+.nav-active {
+    transform: translateX(0%);
+    position: fixed;
+    z-index: 10000;
+}
+
+/* Suivant si la navBar est active ou non, on joue une certaine animation pour rendre le tout plus smooth*/
+.nav-bar-active {
+    position: fixed;
+    z-index: 10000;
+    width: 50%;
+    right: 0;
+    animation: transiActif 1s;
+}
+
+.nav-bar-inactive {
+    animation: transiInactif 1s;
+}
+
+@keyframes transiActif {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 50%;
+    }
+}
+
+@keyframes transiInactif {
+    from {
+        position: fixed;
+        right: 0;
+        width: 50%;
+    }
+    to {
+        position: fixed;
+        right: 0;
+        width: 100%;
+    }
+}
+
+/* La partie ci-dessous permet de réaliser une animation grâce à JS */
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* Aspect des lignes du burger quand le burger est cliqué */
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-7px, -6px);
+}
+
+/** Partie corps de la page */
+
+body {
+    background-color: rgb(100, 100, 224);
+    color: #f1f1f1;
+}
+
+main {
+    margin: 1.5rem 30% 6vh 30%;
+    text-align: justify;
+}
+
+h1,
+h2 {
+    text-align: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.galerie .slider {
+    padding: 10px;
+}
+
+.slider figure {
+    display: none;
+    text-align: center;
+    height: fit-content;
+}
+
+.slider figure img {
+    width: 100%;
+    max-height: 50vh;
+    object-fit: contain;
+}
+
+figure.active {
+    display: block;
+    animation: fade 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container-bouton {
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.bouton-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; /* Permet de dire de prendre tout l'espace disponible restant */
+    text-align: center;
+    font-size: 25px;
+    height: 3vh;
+    margin: 0 15px;
+    cursor: pointer;
+    background: rgba(34, 44, 148, 58);
+    color: #f1f1f1;
+    border: 1px solid rgb(53, 53, 153);
+    box-shadow: 0 10px 10px rgba(11, 34, 235, 0.349); /* Rajoute une sorte d'ombre */
+    border-radius: 20px; /* arrondis les bords */
+    z-index: 1000;
+}
+
+.bouton-nav:hover {
+    background: rgba(20, 34, 138, 28);
+}
+/* Création de la barre centrale de la flèche*/
+.fleche {
+    width: 25%;
+    height: 2px;
+    background: #f1f1f1;
+    position: relative;
+}
+/* Crée les pseudos éléments pour faire la pointe de la flèche, content est nécessaire pour qu'ils apparaissent*/
+.fleche::before,
+.fleche::after {
+    content: "";
+    width: 10px;
+    height: 2px;
+    background: #f1f1f1;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.fleche::before {
+    transform: rotate(45deg);
+    transform-origin: right bottom;
+}
+.fleche::after {
+    transform: rotate(-45deg);
+    transform-origin: right top;
+}
+
+.fleche.gauche {
+    transform: rotate(180deg);
+}
+@media screen and (max-width: 768px) {
+    /** Modification des marges de l'écran lorsque sa taille est plus faible */
+    main {
+        margin: 1.5rem 15% 6vh 15%;
+    }
+    .slider figure img {
+        max-height: 30vh;
+    }
+}
+
+/* On peut utiliser plusieurs combinateurs.
+Dans cet exemple, on colore les balises em lorsqu'elles suivent directement une balise image
+ET qu'elles sont enfant d'une balise de lien.*/
+a {
+    text-decoration: none;
+}
+
+/** Gestion de la partie des choses aimées */
+
+.conteneur_choses_aimees {
+    height: fit-content; /* Fait en sorte que la hauteur colle au contenu */
+    min-height: 25vh;
+    background-color: rgba(110, 123, 255, 100);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative; /* Indication d'une position relative sans déplacement pour pouvoir mettre une position absolute sur les contenus sans incidents*/
+}
+
+.conteneur_onglets {
+    width: 100%;
+    height: 5vh; /* Fixe une taille à 5vh pour que les cases soient toujours grandes*/
+    display: flex;
+    border-bottom: 1px solid #333;
+}
+
+.onglets {
+    /* Propriété permettant de forcer à se répartir équitablement l'espace : 0 = prend tout, 1 = adapte toi,
+    avec la combinaison de 0 et de 1, on permet une répartition équitable en tier*/
+    display: flex;
+    flex: 1 1 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    padding: 5px;
+    font-weight: 700; /* Augmente le gras */
+}
+
+/* hover sur les onglets qui ne sont pas affichés (pour sous entendre qu'ils sont cliquables)  */
+.onglets:hover:not(.ongletActif) {
+    background: rgb(34, 44, 148);
+    color: #f1f1f1;
+    cursor: pointer;
+}
+
+.onglets:not(:nth-child(3)) {
+    /* Permet d'ajouter une bordure à droite sauf pour l'enfant 3 (le dernier) */
+    border-right: 1px solid #333;
+}
+
+.contenu {
+    width: 100%;
+    position: absolute;
+    top: -100%;
+    opacity: 0; /* Masque les contenus, le contenu sera affiché que s'il a la classe contenuActif */
+}
+
+.contenu h3 {
+    padding: 15px 20px 10px 20px; /* Ajout d'un padding pour que ce soit plus propre */
+}
+
+.contenu hr {
+    /* Stylise le séparateur pour qu'il soit plus joli*/
+    width: 25%;
+    height: 2px;
+    margin-left: 20px;
+    background: #000;
+    border: none;
+}
+
+.contenu p {
+    line-height: 1.25em;
+    padding: 20px;
+}
+
+/** Animation des onglets et contenus */
+.ongletActif {
+    background: rgba(20, 34, 138, 28);
+    color: #f1f1f1;
+    transition: all 0.3s ease; /* Permet de faire une jolie transition */
+}
+
+.contenuActif {
+    position: relative; /* Met la position en relative pour que l'élément soit dans le flux et que la taille du conteneur s'adapte */
+    animation: fade 0.5s forwards; /* Appelle l'animation fade définie en keyframe plus haut */
+}
+
+/** Partie formulaire et avis */
+
+/* focus désigne lorsque l'objet est sélectionné */
+input:focus {
+    background-color: rgb(226, 214, 214);
+}
+
+input {
+    background-color: #fff;
+    border-radius: 20px;
+    height: 25px;
+    padding: 5px;
+    border-style: hidden;
+}
+
+#choix_avis {
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: stretch;
+    margin: auto;
+}
+
+form > input {
+    display: flex;
+    margin: auto;
+}
+
+form > select {
+    margin: auto;
+}
+
+/* background: none permet de retirer le background par défaut des boutons */
+button {
+    display: block;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    background: rgba(34, 44, 148, 58);
+    border: 0.15rem solid rgb(53, 53, 153);
+    color: #f1f1f1;
+    font-size: 0.8rem;
+    border-radius: 0.7rem;
+}
+
+/* hover désigne lorsque l'objet est survolé */
+button:hover {
+    cursor: pointer;
+    background: rgba(20, 34, 138, 28);
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 5vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    z-index: 1000;
+    background-color: rgba(224, 198, 101, 88);
+    color: #333;
+}
+
+.affichageFooter {
+    animation: animFooter 1.5s ease;
+    bottom: 0;
+}
+
+@keyframes animFooter {
+    from {
+        bottom: -10%;
+        opacity: 0;
+    }
+    to {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+/** Partie Réseaux */
+
+.reseaux p {
+    text-align: center;
+    line-height: 3vh;
+}
+
+/* Cards */
+
+section.reseaux {
+    /* Fixe la taille du conteneur de la partie réseaux pour les cards*/
+    margin: auto;
+    max-width: 1400px;
+}
+
+.card_container {
+    /* Fait un affichage grid qui remplit autant de cartes que possible avec hauteur min 350px, et 1fr max*/
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 30px 30px;
+    margin: 80px 0px;
+}
+
+.card_wrapper {
+    /* sert à l'animation de l'élément */
+    display: flex;
+    perspective: 2000px;
+    perspective-origin: top;
+}
+
+.card_wrapper:hover .card {
+    transform: rotateY(180deg);
+}
+
+.card_wrapper:hover .fleche.card_arrow {
+    transform: translateX(10px);
+    transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.card {
+    display: flex;
+    min-width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; /* permet de garder l'environnement 3d définit dans card_wrapper */
+    transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1); /* cubic-bezier est un style d'animation en ease*/
+    color: #f1f1f1;
+    font-weight: bold;
+}
+
+.card_front,
+.card_back {
+    display: flex;
+    box-sizing: border-box;
+    min-width: 100%;
+    padding: 30px;
+    border-radius: 8px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    box-shadow: 5px 5px 10px rgba(11, 34, 235, 0.349); /* Rajoute une sorte d'ombre */
+}
+
+.card_front {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card_front h1 {
+    font-size: 25px;
+    line-height: 35px;
+    margin: 0;
+}
+
+.card_front p {
+    text-align: justify;
+}
+
+.card_back {
+    transform: rotateY(180deg) translate(100%); /* permet de faire afficher l'arrière que quand c'est voulu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_back a {
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: normal;
+    background-color: #f1f1f1;
+    font-size: 14px;
+    color: #333;
+    transition: background-color 0.3s ease-out, color 0.3s ease-out;
+}
+
+.card_back a:hover {
+    background-color: rgba(20, 34, 138, 28);
+    color: #f1f1f1;
+}
+
+.card_back p {
+    font-size: 25px;
+    line-height: 35px;
+    letter-spacing: 1.5px;
+}
+
+.fleche.card_arrow {
+    transition: transform 0.3 ease;
+    width: 0%;
+    left: 100%;
+}
+
+@media screen and (max-width: 480px) {
+    /** Modification des tailles minimales des cards lorsque l'écran est plus petit */
+    .card_container {
+        /* Fait un affichage grid qui remplit autant de cartes que possible avec hauteur min 350px, et 1fr max*/
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+/** Partie work in progress */
+
+.WIP h1 {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+/** Partie menu déroulant */
+
+.container_deroulant {
+    width: 100%;
+    height: auto;
+    margin: 10px auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.menu_deroulant {
+    width: 100%;
+    height: auto;
+    margin: 5px 0;
+}
+
+.visible_panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(53, 53, 153);
+    border-radius: 10px;
+    position: relative;
+    z-index: 100;
+}
+
+.visible_panel h2 {
+    margin: 10px 0 10px 10px;
+    font-size: 25px;
+}
+
+/* Crée un carré qui sera cliquable pour le menu déroulant*/
+.croix {
+    display: block;
+    justify-content: center;
+    height: 25px;
+    width: 25px;
+    position: relative;
+    margin-right: 10px;
+    transform: rotate(-45deg);
+    cursor: pointer;
+}
+
+/* Création des pseudos éléments */
+.croix::before,
+.croix::after {
+    content: "";
+    position: absolute;
+    margin-right: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 25px;
+    height: 3px;
+    border-radius: 2px;
+    background: #f1f1f1;
+}
+
+/* rotate des pseudos éléments pour faire une croix, vu que leur parent est tourné, ça donne un +*/
+.croix::before {
+    transform: rotate(45deg);
+}
+
+.croix::after {
+    transform: rotate(-45deg);
+}
+
+.anim_changement_etat {
+    transform: rotate(0);
+    animation: transform 0.5s ease;
+}
+
+.toggle_panel {
+    padding: 0px 15px;
+    height: 0;
+    opacity: 0;
+}
+
+.toggle_panel h4 {
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+.toggle_panel p {
+    line-height: 1.5;
+}
+
+/* Partie projets */
+
+.projet_head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(53, 53, 153);
+    border-radius: 100px;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    padding: 10px 0px 10px 0px;
+}
+
+.presentation_projet {
+    display: flex;
+    flex-direction: column;
+}
+
+.projet_info {
+    display: flex;
+}
+
+@media screen and (max-width: 1024px) {
+    .projet_info {
+        flex-direction: column;
+    }
+    .projet_info div {
+        margin-left: 0;
+    }
+    .projet_info {
+        align-items: center;
+    }
+}
+
+.projet_info img {
+    object-fit: contain;
+    max-width: 200px;
+    height: auto;
+}
+
+.projet_content {
+    margin-left: 5px;
+}
+
+.presentation_projet h4,
+.anime_review h4 {
+    text-align: center;
+    font-size: 20px;
+    line-height: 2;
+}
+
+.presentation_projet p,
+.anime_review p {
+    line-height: 1.25;
+    text-indent: 5%;
+}
+
+/** Partie anime review */
+
+.anime_review {
+    display: block;
+}
+
+.img_anime_review {
+    display: block;
+    margin: auto;
+    height: 400px;
+}
+
+.anime_review p {
+    margin-bottom: 10px;
+}
+
+.liste_note p,
+.tdl p {
+    text-indent: 25%;
+    text-align: left;
+}
+
+.liste_note p::before,
+.tdl p::before {
+    content: "- ";
+}
+
+/** Partie PreMiD */
+
+.card_front.premid {
+    flex-direction: unset;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 2vh;
+    background-color: #050358;
+    align-items: center;
+}
+
+.fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: auto, 0, auto, 0;
+}
+
+.fill.premid {
+    max-width: 128px;
+    max-height: 128px;
+}
+
+.fill img {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.info.premid {
+    width: 75%;
+    padding-left: 5px;
+}
+
+/* Modifie le style du titre de la présence */
+.info.premid h2 {
+    margin-top: 0;
+    margin-bottom: 1vh;
+}
+
+.info.premid a {
+    color: #f1f1f1;
+    text-decoration: underline;
+}
+
+/* Partie stats sous le texte de description */
+
+.info.premid div {
+    padding-top: 1vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info.premid div > * {
+    padding: 5px;
+    justify-content: left;
+}
+
+.info.premid div > *:first-child {
+    padding-left: 0;
+}
+
+.info.premid div > *:last-child {
+    padding-right: 0;
+}
+
+@media screen and (max-width: 500px) {
+    /** Modification des tailles minimales des cards lorsque l'écran est plus petit */
+    .card_front.premid {
+        flex-direction: column;
+    }
+
+    .info.premid {
+        width: 100%;
+        padding-left: 0px;
+    }
+
+    .info.premid div {
+        flex-direction: column;
+    }
+    .info.premid div p {
+        padding-left: 0;
+    }
+}
+
+/* Partie to do list */
+
+table {
+    border-collapse: collapse;
+    border: 2px solid #050358;
+    width: 100%;
+}
+
+thead {
+    text-align: center;
+}
+
+tr :nth-child(1) {
+    width: 80%;
+    text-indent: 1%;
+}
+
+tr :nth-child(2) {
+    text-align: center;
+}
+
+tr {
+    border: 1px solid #050358;
+    height: 4vh;
+}
+
+tr:first-child {
+    border-top: none;
+}
+tr:last-child {
+    border-bottom: none;
+}
+
+.legend {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    margin-top: 2vh;
+}
+
+.centre {
+    height: 82vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.centre > div {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}
