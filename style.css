@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Cagliostro&display=swap');
+
+html {
+    min-height: 100vh;
+    background-color: #d6d2c4;
+}
+
 html.arg-1 {
-    min-height: 100%;
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -7,11 +13,53 @@ html.arg-1 {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     margin: 0;
+    font-family: "Cagliostro", sans-serif;
+}
+
+body.arg-1 {
+    flex-direction: unset;
+    display: unset;
+    min-height: unset;
+}
+
+p {
+    line-height: 30px;
 }
 
 p.arg-1 {
     margin: 0;
     text-align: center;
     font-size: 10em;
+}
+
+.m-5 {
+    margin: 5px;
+}
+
+.mbot-15 {
+    margin-bottom: 15px;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.justify {
+    text-align: justify;
+}
+
+#goal {
+    margin-top: auto;
 }
