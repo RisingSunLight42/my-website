@@ -63,3 +63,24 @@ p.arg-1 {
 #goal {
     margin-top: auto;
 }
+
+progress {
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+::-webkit-progress-bar {
+    background-color: orange;
+}
+
+.min-width-45 {
+    width: 45px;
+    display: inline-flex;
+}
+
+.typing {
+    display: none;
+}
