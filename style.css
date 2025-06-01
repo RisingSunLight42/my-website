@@ -84,3 +84,11 @@ progress {
 .typing {
     display: none;
 }
+
+.help-me {
+    display: none;
+}
+
+.get-my-VOICE-back {
+    break-inside: auto;
+}
